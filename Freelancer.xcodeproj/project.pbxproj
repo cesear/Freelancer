@@ -18,6 +18,8 @@
 		EB9823B72672972A00939804 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B62672972A00939804 /* RealmSwift */; };
 		EB9823B92672972A00939804 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B82672972A00939804 /* Realm */; };
 		EB9823BE26729BB600939804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB9823BD26729BB600939804 /* README.md */; };
+		EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900C2674FF000078D546 /* RealmProvider.swift */; };
+		EBD7900F267503020078D546 /* URL+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900E267503020078D546 /* URL+Document.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		EB9823992672942500939804 /* FreelancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelancerUITests.swift; sourceTree = "<group>"; };
 		EB98239B2672942500939804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9823BD26729BB600939804 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EBD7900C2674FF000078D546 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		EBD7900E267503020078D546 /* URL+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Document.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +175,74 @@
 		EBD790032674FCA10078D546 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				EBD790042674FE8A0078D546 /* Provider */,
+				EBD7900B2674FEC90078D546 /* Extensions */,
+				EBD7900A2674FEBB0078D546 /* Managers */,
+				EBD790092674FEB20078D546 /* Protocol */,
+				EBD790082674FEA80078D546 /* Models */,
+				EBD790072674FEA20078D546 /* DTO */,
+				EBD790062674FE980078D546 /* Repository */,
+				EBD790052674FE930078D546 /* Mapper */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		EBD790042674FE8A0078D546 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				EBD7900C2674FF000078D546 /* RealmProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		EBD790052674FE930078D546 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		EBD790062674FE980078D546 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EBD790072674FEA20078D546 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		EBD790082674FEA80078D546 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBD790092674FEB20078D546 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EBD7900A2674FEBB0078D546 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EBD7900B2674FEC90078D546 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBD7900E267503020078D546 /* URL+Document.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +383,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,
+				EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */,
 				EB98237C2672941A00939804 /* ViewController.swift in Sources */,
 				EB9823782672941A00939804 /* AppDelegate.swift in Sources */,
 				EB98237A2672941A00939804 /* SceneDelegate.swift in Sources */,
@@ -492,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9AL2CKFURC;
+				DEVELOPMENT_TEAM = MD556DF3MV;
 				INFOPLIST_FILE = Freelancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,7 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9AL2CKFURC;
+				DEVELOPMENT_TEAM = MD556DF3MV;
 				INFOPLIST_FILE = Freelancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
