@@ -106,11 +106,11 @@
 		EB9823762672941A00939804 /* Freelancer */ = {
 			isa = PBXGroup;
 			children = (
+				EBD790032674FCA10078D546 /* Persistence */,
+				EBD790022674FC990078D546 /* ViewModels */,
 				EB9823B12672945E00939804 /* UI */,
 				EB9823AD2672944C00939804 /* Application */,
-				EB9823AC2672944100939804 /* ViewModel */,
 				EB9823AB2672943600939804 /* Views */,
-				EB9823AA2672942D00939804 /* Models */,
 				EB9823852672942400939804 /* Info.plist */,
 			);
 			path = Freelancer;
@@ -134,26 +134,12 @@
 			path = FreelancerUITests;
 			sourceTree = "<group>";
 		};
-		EB9823AA2672942D00939804 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		EB9823AB2672943600939804 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				EB98237B2672941A00939804 /* ViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		EB9823AC2672944100939804 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EB9823AD2672944C00939804 /* Application */ = {
@@ -173,6 +159,20 @@
 				EB9823822672942400939804 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		EBD790022674FC990078D546 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EBD790032674FCA10078D546 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
