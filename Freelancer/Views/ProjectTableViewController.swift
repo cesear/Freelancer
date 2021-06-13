@@ -74,7 +74,7 @@ class ProjectTableViewController: UITableViewController {
                     self.viewModel.saveProject(prpjectName, false, 0)
                     self.tableView.reloadData()
                 } else{
-                    self.showAlertWithOneButton("An error occured", "Error adding \(prpjectName)")
+                    self.showAlertWithOneButton("An error occured", "An other project named \(prpjectName) already exist")
                 }
 
             }
