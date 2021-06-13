@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EB9823782672941A00939804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823772672941A00939804 /* AppDelegate.swift */; };
 		EB98237A2672941A00939804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823792672941A00939804 /* SceneDelegate.swift */; };
-		EB98237C2672941A00939804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98237B2672941A00939804 /* ViewController.swift */; };
 		EB98237F2672941A00939804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB98237D2672941A00939804 /* Main.storyboard */; };
 		EB9823812672942400939804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9823802672942400939804 /* Assets.xcassets */; };
 		EB9823842672942400939804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9823822672942400939804 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,10 @@
 		EB9823B72672972A00939804 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B62672972A00939804 /* RealmSwift */; };
 		EB9823B92672972A00939804 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B82672972A00939804 /* Realm */; };
 		EB9823BE26729BB600939804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB9823BD26729BB600939804 /* README.md */; };
+		EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */; };
+		EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF82676BF100076D659 /* UIViewController.swift */; };
+		EBC12FFB2676BF4C0076D659 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FFA2676BF4C0076D659 /* String.swift */; };
+		EBC12FFF2676C01E0076D659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBC130012676C01E0076D659 /* InfoPlist.strings */; };
 		EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900C2674FF000078D546 /* RealmProvider.swift */; };
 		EBD7900F267503020078D546 /* URL+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900E267503020078D546 /* URL+Document.swift */; };
 		EBD79011267503E30078D546 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79010267503E30078D546 /* DataManager.swift */; };
@@ -55,7 +58,6 @@
 		EB9823742672941A00939804 /* Freelancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freelancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9823772672941A00939804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB9823792672941A00939804 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB98237B2672941A00939804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB98237E2672941A00939804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB9823802672942400939804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB9823832672942400939804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,17 @@
 		EB9823992672942500939804 /* FreelancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelancerUITests.swift; sourceTree = "<group>"; };
 		EB98239B2672942500939804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9823BD26729BB600939804 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
+		EBC12FF82676BF100076D659 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		EBC12FFA2676BF4C0076D659 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		EBC130002676C01E0076D659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC130022676C03C0076D659 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBC130032676C20C0076D659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		EBC130042676C20D0076D659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EBC130052676C20D0076D659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EBC130062676C2EF0076D659 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Main.strings"; sourceTree = "<group>"; };
+		EBC130072676C2EF0076D659 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EBC130082676C2EF0076D659 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EBD7900C2674FF000078D546 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		EBD7900E267503020078D546 /* URL+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Document.swift"; sourceTree = "<group>"; };
 		EBD79010267503E30078D546 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -134,6 +147,8 @@
 		EB9823762672941A00939804 /* Freelancer */ = {
 			isa = PBXGroup;
 			children = (
+				EBC12FFC2676BFEF0076D659 /* Resources */,
+				EBC12FF72676BEBD0076D659 /* Helpers */,
 				EBD790032674FCA10078D546 /* Persistence */,
 				EBD790022674FC990078D546 /* ViewModels */,
 				EB9823B12672945E00939804 /* UI */,
@@ -165,7 +180,7 @@
 		EB9823AB2672943600939804 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EB98237B2672941A00939804 /* ViewController.swift */,
+				EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +202,31 @@
 				EB9823822672942400939804 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		EBC12FF72676BEBD0076D659 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EBC130092676C4180076D659 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EBC12FFC2676BFEF0076D659 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBC130012676C01E0076D659 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBC130092676C4180076D659 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBC12FF82676BF100076D659 /* UIViewController.swift */,
+				EBC12FFA2676BF4C0076D659 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EBD790022674FC990078D546 /* ViewModels */ = {
@@ -370,6 +410,9 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"en-GB",
+				"en-US",
 			);
 			mainGroup = EB98236B2672941900939804;
 			packageReferences = (
@@ -395,6 +438,7 @@
 				EB9823812672942400939804 /* Assets.xcassets in Resources */,
 				EB9823BE26729BB600939804 /* README.md in Resources */,
 				EB98237F2672941A00939804 /* Main.storyboard in Resources */,
+				EBC12FFF2676C01E0076D659 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC12FFB2676BF4C0076D659 /* String.swift in Sources */,
+				EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */,
 				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,
 				EBD790132675050F0078D546 /* Storable.swift in Sources */,
 				EBD7902426751A150078D546 /* Repository.swift in Sources */,
@@ -427,7 +473,7 @@
 				EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */,
 				EBD79022267514F40078D546 /* DBManager+DataManager.swift in Sources */,
 				EBD7901E267511210078D546 /* RealmObject+Storable.swift in Sources */,
-				EB98237C2672941A00939804 /* ViewController.swift in Sources */,
+				EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */,
 				EBD7902826751C580078D546 /* ProjectViewModel.swift in Sources */,
 				EBD7902626751A980078D546 /* ProjectRepository.swift in Sources */,
 				EB9823782672941A00939804 /* AppDelegate.swift in Sources */,
@@ -475,6 +521,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB98237E2672941A00939804 /* Base */,
+				EBC130032676C20C0076D659 /* en-GB */,
+				EBC130062676C2EF0076D659 /* en-US */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -483,8 +531,21 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB9823832672942400939804 /* Base */,
+				EBC130042676C20D0076D659 /* en-GB */,
+				EBC130072676C2EF0076D659 /* en-US */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EBC130012676C01E0076D659 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC130002676C01E0076D659 /* en */,
+				EBC130022676C03C0076D659 /* fr */,
+				EBC130052676C20D0076D659 /* en-GB */,
+				EBC130082676C2EF0076D659 /* en-US */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -494,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -555,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
