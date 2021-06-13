@@ -60,6 +60,11 @@ class ProjectTableViewController: UITableViewController {
         
         return swipeActions
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    
     //MARK: Helpers
     
     @objc private func addTapped() {
