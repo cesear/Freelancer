@@ -20,6 +20,18 @@
 		EB9823BE26729BB600939804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB9823BD26729BB600939804 /* README.md */; };
 		EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900C2674FF000078D546 /* RealmProvider.swift */; };
 		EBD7900F267503020078D546 /* URL+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900E267503020078D546 /* URL+Document.swift */; };
+		EBD79011267503E30078D546 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79010267503E30078D546 /* DataManager.swift */; };
+		EBD790132675050F0078D546 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD790122675050F0078D546 /* Storable.swift */; };
+		EBD79015267505260078D546 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79014267505260078D546 /* Project.swift */; };
+		EBD79017267507930078D546 /* ProjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79016267507930078D546 /* ProjectDTO.swift */; };
+		EBD7901A267508060078D546 /* MappableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79019267508060078D546 /* MappableProtocol.swift */; };
+		EBD7901C267508380078D546 /* ProjectDTO+MappableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7901B267508380078D546 /* ProjectDTO+MappableProtocol.swift */; };
+		EBD7901E267511210078D546 /* RealmObject+Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7901D267511210078D546 /* RealmObject+Storable.swift */; };
+		EBD79020267514CB0078D546 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7901F267514CB0078D546 /* DBManager.swift */; };
+		EBD79022267514F40078D546 /* DBManager+DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79021267514F40078D546 /* DBManager+DataManager.swift */; };
+		EBD7902426751A150078D546 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7902326751A150078D546 /* Repository.swift */; };
+		EBD7902626751A980078D546 /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7902526751A980078D546 /* ProjectRepository.swift */; };
+		EBD7902826751C580078D546 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7902726751C580078D546 /* ProjectViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +69,18 @@
 		EB9823BD26729BB600939804 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBD7900C2674FF000078D546 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		EBD7900E267503020078D546 /* URL+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Document.swift"; sourceTree = "<group>"; };
+		EBD79010267503E30078D546 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EBD790122675050F0078D546 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		EBD79014267505260078D546 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		EBD79016267507930078D546 /* ProjectDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDTO.swift; sourceTree = "<group>"; };
+		EBD79019267508060078D546 /* MappableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableProtocol.swift; sourceTree = "<group>"; };
+		EBD7901B267508380078D546 /* ProjectDTO+MappableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectDTO+MappableProtocol.swift"; sourceTree = "<group>"; };
+		EBD7901D267511210078D546 /* RealmObject+Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmObject+Storable.swift"; sourceTree = "<group>"; };
+		EBD7901F267514CB0078D546 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		EBD79021267514F40078D546 /* DBManager+DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBManager+DataManager.swift"; sourceTree = "<group>"; };
+		EBD7902326751A150078D546 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EBD7902526751A980078D546 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		EBD7902726751C580078D546 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +192,7 @@
 		EBD790022674FC990078D546 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EBD7902726751C580078D546 /* ProjectViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -175,8 +200,8 @@
 		EBD790032674FCA10078D546 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				EBD790042674FE8A0078D546 /* Provider */,
 				EBD7900B2674FEC90078D546 /* Extensions */,
+				EBD790042674FE8A0078D546 /* Provider */,
 				EBD7900A2674FEBB0078D546 /* Managers */,
 				EBD790092674FEB20078D546 /* Protocol */,
 				EBD790082674FEA80078D546 /* Models */,
@@ -198,6 +223,7 @@
 		EBD790052674FE930078D546 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				EBD79019267508060078D546 /* MappableProtocol.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -205,6 +231,8 @@
 		EBD790062674FE980078D546 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				EBD7902326751A150078D546 /* Repository.swift */,
+				EBD7902526751A980078D546 /* ProjectRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -212,6 +240,8 @@
 		EBD790072674FEA20078D546 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				EBD79016267507930078D546 /* ProjectDTO.swift */,
+				EBD7901B267508380078D546 /* ProjectDTO+MappableProtocol.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -219,6 +249,7 @@
 		EBD790082674FEA80078D546 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EBD79014267505260078D546 /* Project.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +257,7 @@
 		EBD790092674FEB20078D546 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				EBD790122675050F0078D546 /* Storable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -233,6 +265,9 @@
 		EBD7900A2674FEBB0078D546 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EBD7901F267514CB0078D546 /* DBManager.swift */,
+				EBD79010267503E30078D546 /* DataManager.swift */,
+				EBD79021267514F40078D546 /* DBManager+DataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -241,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD7900E267503020078D546 /* URL+Document.swift */,
+				EBD7901D267511210078D546 /* RealmObject+Storable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,10 +420,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,
+				EBD790132675050F0078D546 /* Storable.swift in Sources */,
+				EBD7902426751A150078D546 /* Repository.swift in Sources */,
+				EBD79011267503E30078D546 /* DataManager.swift in Sources */,
+				EBD79020267514CB0078D546 /* DBManager.swift in Sources */,
 				EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */,
+				EBD79022267514F40078D546 /* DBManager+DataManager.swift in Sources */,
+				EBD7901E267511210078D546 /* RealmObject+Storable.swift in Sources */,
 				EB98237C2672941A00939804 /* ViewController.swift in Sources */,
+				EBD7902826751C580078D546 /* ProjectViewModel.swift in Sources */,
+				EBD7902626751A980078D546 /* ProjectRepository.swift in Sources */,
 				EB9823782672941A00939804 /* AppDelegate.swift in Sources */,
 				EB98237A2672941A00939804 /* SceneDelegate.swift in Sources */,
+				EBD7901A267508060078D546 /* MappableProtocol.swift in Sources */,
+				EBD7901C267508380078D546 /* ProjectDTO+MappableProtocol.swift in Sources */,
+				EBD79017267507930078D546 /* ProjectDTO.swift in Sources */,
+				EBD79015267505260078D546 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
