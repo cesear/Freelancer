@@ -13,7 +13,7 @@ class ProjectViewModel {
     
     init(dbManager: DataManager = DBManager(RealmProvider.default)) {
         self.dbManager = dbManager
-        self.projectRepository = ProjectRepository.init(dbManager: dbManager)
+        self.projectRepository = ProjectRepository(dbManager: dbManager)
     }
     
     func exist(_ projectDto: ProjectDTO)->Bool{
@@ -24,12 +24,11 @@ class ProjectViewModel {
         self.projectRepository.saveProject(projectDto)
     }
     
-    func getProjects(){
-        let projectDto = self.projectRepository.getAllProjects()
-        print(projectDto)
+    func getProjects()->[ProjectDTO]{
+        return self.projectRepository.getAllProjects()
     }
     
-    func deleteAllProjects() {
+    func deleteProjects() {
         self.projectRepository.deleteAll()
     }
     

@@ -11,10 +11,12 @@ import XCTest
 class ProjectTests: XCTestCase {
     
     var viewModel: ProjectViewModel!
-    let projectDto = ProjectDTO.init(name: "Freelancer", completed: false, timeSpent: 10)
+    let pythonProject = ProjectDTO.init(name: "Python", completed: false, timeSpent: 10)
+    let javatProject = ProjectDTO.init(name: "Java", completed: false, timeSpent: 15)
+    let swiftProject = ProjectDTO.init(name: "Swift", completed: false, timeSpent: 20)
     override func setUp() {
         self.viewModel = ProjectViewModel()
-        self.viewModel.deleteAllProjects()
+        self.viewModel.deleteProjects()
     }
     
     override func tearDown() {
@@ -22,9 +24,29 @@ class ProjectTests: XCTestCase {
     }
     
     func testSaveProject() {
-        viewModel.saveProject(projectDto)
-        XCTAssertTrue(viewModel.exist(projectDto))
-        viewModel.deleteProject(projectDto)
-        XCTAssertFalse(viewModel.exist(projectDto))
-    }    
+        print("Adding python project")
+        viewModel.saveProject(pythonProject)
+        // Ensure python project was addded
+        XCTAssertTrue(viewModel.exist(pythonProject))
+        print("Deleting python project")
+        viewModel.deleteProject(pythonProject)
+        // Ensure python project was deleted
+        XCTAssertFalse(viewModel.exist(pythonProject))
+        print("Adding Java project")
+        viewModel.saveProject(javatProject)
+        // Ensure Java project was addded
+        XCTAssertTrue(viewModel.exist(javatProject))
+        print("Adding Swift project")
+        viewModel.saveProject(swiftProject)
+        // Ensure Swift project was addded
+        XCTAssertTrue(viewModel.exist(swiftProject))
+        // Ensure getProjects project returns both Java and Swift projects
+        XCTAssertTrue(viewModel.getProjects().count == 2)
+        print("Saved projects: \(viewModel.getProjects().map({$0.name}))")
+        print("Deleting all projects")
+        viewModel.deleteProjects()
+        // Ensure all projects were deleted
+        XCTAssertTrue(viewModel.getProjects().count == 0)
+        print("Remaining projects: \(viewModel.getProjects().map({$0.name}))")
+    }
 }
