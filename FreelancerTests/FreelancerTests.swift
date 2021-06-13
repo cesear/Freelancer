@@ -8,26 +8,23 @@
 import XCTest
 @testable import Freelancer
 
-class FreelancerTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class ProjectTests: XCTestCase {
+    
+    var viewModel: ProjectViewModel!
+    let projectDto = ProjectDTO.init(name: "Freelancer", completed: false, timeSpent: 10)
+    override func setUp() {
+        self.viewModel = ProjectViewModel()
+        self.viewModel.deleteAllProjects()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        self.viewModel = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
+    func testSaveProject() {
+        viewModel.saveProject(projectDto)
+        XCTAssertTrue(viewModel.exist(projectDto))
+        viewModel.deleteProject(projectDto)
+        XCTAssertFalse(viewModel.exist(projectDto))
+    }    
 }

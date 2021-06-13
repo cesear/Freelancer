@@ -33,4 +33,8 @@ class Repository<T> {
     func exist<T>(_ model: T.Type, object: Storable)->Bool where T : Storable{
         return dbManager.exist(model, object: object)
     }
+    
+    func deleteAll<T>(_ model: T.Type) throws where T : Storable{
+        try dbManager.deleteAll(model)
+    }
 }

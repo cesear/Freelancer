@@ -40,9 +40,19 @@ extension DBManager: DataManager {
             realm.add(object)
         }
     }
+    
     func exist<T>(_ model:  T.Type, object: Storable) -> Bool {
         guard let realm = realm, let model = model as? Object.Type, let object = object as? Object else { return false }
         return (realm.object(ofType: model, forPrimaryKey: object.value(forKey: model.primaryKey() ?? "")) != nil)
-        
+    }
+    
+    func deleteAll<T>(_ model: T.Type) throws where T : Storable {
+        guard let realm = realm, let model = model as? Object.Type else { throw RealmError.eitherRealmIsNilOrNotRealmSpecificModel }
+        try realm.write {
+            let objects = realm.objects(model)
+            for object in objects {
+                realm.delete(object)
+            }
+        }
     }
 }

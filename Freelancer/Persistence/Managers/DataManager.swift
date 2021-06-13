@@ -12,5 +12,6 @@ protocol DataManager{
     func exist<T: Storable>(_ model: T.Type, object: Storable)->Bool
     func fetch<T: Storable>(_ model: T.Type, predicate: NSPredicate?, sorted: Sorted?) ->[Storable]
     func delete<T: Storable>(_ model: T.Type, object: Storable, predicate: NSPredicate?) throws
+    func deleteAll<T: Storable>(_ model: T.Type) throws
 }
 

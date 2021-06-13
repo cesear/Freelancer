@@ -16,18 +16,33 @@ class ProjectViewModel {
         self.projectRepository = ProjectRepository.init(dbManager: dbManager)
     }
     
-    func saveProject() {
-        let projectDto = ProjectDTO.init(name: "Freelancer", status: false, timeSpent: 10)
-        if !self.projectRepository.exist(projectDto){
-            self.projectRepository.saveProject(projectDto)
-        } else{
-            self.projectRepository.delete(projectDto)
-        }
-        
+    func exist(_ projectDto: ProjectDTO)->Bool{
+        return self.projectRepository.exist(projectDto)
+    }
+    
+    func saveProject(_ projectDto: ProjectDTO) {
+        self.projectRepository.saveProject(projectDto)
     }
     
     func getProjects(){
         let projectDto = self.projectRepository.getAllProjects()
         print(projectDto)
+    }
+    
+    func deleteAllProjects() {
+        self.projectRepository.deleteAll()
+    }
+    
+    func deleteProject(_ projectDto: ProjectDTO) {
+        self.projectRepository.delete(projectDto)
+    }
+
+    func saveOrDelete(){
+        let projectDto = ProjectDTO.init(name: "Freelancer", completed: false, timeSpent: 10)
+        if !self.exist(projectDto){
+            self.saveProject(projectDto)
+        } else{
+            self.deleteProject(projectDto)
+        }
     }
 }

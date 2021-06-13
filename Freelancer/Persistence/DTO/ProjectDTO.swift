@@ -9,6 +9,6 @@ import Foundation
 
 struct ProjectDTO {
     var name = ""
-    var status = false
+    var completed = false
     var timeSpent = 0
 }

@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     let viewModel = ProjectViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.saveProject()
+        viewModel.saveOrDelete()
         viewModel.getProjects()
     }
 
