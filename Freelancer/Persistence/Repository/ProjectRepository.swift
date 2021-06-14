@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RealmSwift
+
 class ProjectRepository: Repository<Project>{
     
     func exist(_ projectDTO: ProjectDTO ) -> Bool {
@@ -19,6 +21,10 @@ class ProjectRepository: Repository<Project>{
     
     func getAllProjects(on sort: Sorted? = nil )->[ProjectDTO] {
         return super.fetch(Project.self, predicate: nil, sorted: sort).map({ ProjectDTO.mapFromPersistenceObject($0 as! Project) })
+    }
+    
+    func getAll(on sort: Sorted? = nil )->Results<Object>? {
+        return super.getAll(Project.self)
     }
 
     func delete(_ projectDTO: ProjectDTO){

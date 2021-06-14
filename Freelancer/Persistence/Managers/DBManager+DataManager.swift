@@ -55,4 +55,9 @@ extension DBManager: DataManager {
             }
         }
     }
+    
+    func getAll<T>(_ model:  T.Type) -> Results<Object>? where T : Storable{
+        guard let realm = realm, let model = model as? Object.Type else { return nil}
+        return realm.objects(model)   
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 //MARK: - Repository
 class Repository<T> {
@@ -36,5 +37,9 @@ class Repository<T> {
     
     func deleteAll<T>(_ model: T.Type) throws where T : Storable{
         try dbManager.deleteAll(model)
+    }
+    
+    func getAll<T>(_ model: T.Type)-> Results<Object>? where T : Storable{
+        return dbManager.getAll(model)
     }
 }

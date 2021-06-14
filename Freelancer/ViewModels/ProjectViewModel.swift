@@ -6,14 +6,26 @@
 //
 
 import Foundation
+import RealmSwift
+
 class ProjectViewModel {
     
     let dbManager: DataManager
     let projectRepository: ProjectRepository
-    
+    var notificationToken: NotificationToken?
+    var updateDataSourceHandler: (() -> Void)?
     init(dbManager: DataManager = DBManager(RealmProvider.default)) {
         self.dbManager = dbManager
         self.projectRepository = ProjectRepository(dbManager: dbManager)
+    }
+    
+    func bind(){
+        self.observeChanges()
+    }
+    
+    func unbind(){
+        self.notificationToken?.invalidate()
+        self.notificationToken = nil
     }
     
     func exist(_ projectDto: ProjectDTO)->Bool{
@@ -48,5 +60,14 @@ class ProjectViewModel {
     
     func deleteProject(_ projectDto: ProjectDTO) {
         self.projectRepository.delete(projectDto)
+    }
+    
+    func observeChanges(){
+        if let results = self.projectRepository.getAll(){
+            notificationToken = results.observe { [weak self] (changes: RealmCollectionChange) in
+                print("Update received")
+                self?.updateDataSourceHandler?()
+            }
+        }
     }
 }
