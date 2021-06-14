@@ -26,6 +26,12 @@
 		EBC13018267788560076D659 /* StoryboardInitilizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC13017267788560076D659 /* StoryboardInitilizer.swift */; };
 		EBC1301A2677888F0076D659 /* StoryboardInitilizer+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC130192677888F0076D659 /* StoryboardInitilizer+Coordinator.swift */; };
 		EBC1301C2677896F0076D659 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1301B2677896F0076D659 /* ProjectDetailsViewController.swift */; };
+		EBCE70722677C9ED008D691B /* ProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70712677C9ED008D691B /* ProjectDetailsViewModel.swift */; };
+		EBCE70742677CCDD008D691B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70732677CCDD008D691B /* Date.swift */; };
+		EBCE70762677D422008D691B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70752677D422008D691B /* Session.swift */; };
+		EBCE70782677D636008D691B /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70772677D636008D691B /* SessionRepository.swift */; };
+		EBCE707A2677D660008D691B /* SessionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70792677D660008D691B /* SessionDTO.swift */; };
+		EBCE707C2677D72B008D691B /* SessiontDTO+MappableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE707B2677D72B008D691B /* SessiontDTO+MappableProtocol.swift */; };
 		EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900C2674FF000078D546 /* RealmProvider.swift */; };
 		EBD7900F267503020078D546 /* URL+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7900E267503020078D546 /* URL+Document.swift */; };
 		EBD79011267503E30078D546 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD79010267503E30078D546 /* DataManager.swift */; };
@@ -90,6 +96,12 @@
 		EBC13017267788560076D659 /* StoryboardInitilizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitilizer.swift; sourceTree = "<group>"; };
 		EBC130192677888F0076D659 /* StoryboardInitilizer+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardInitilizer+Coordinator.swift"; sourceTree = "<group>"; };
 		EBC1301B2677896F0076D659 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
+		EBCE70712677C9ED008D691B /* ProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModel.swift; sourceTree = "<group>"; };
+		EBCE70732677CCDD008D691B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		EBCE70752677D422008D691B /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		EBCE70772677D636008D691B /* SessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		EBCE70792677D660008D691B /* SessionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDTO.swift; sourceTree = "<group>"; };
+		EBCE707B2677D72B008D691B /* SessiontDTO+MappableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessiontDTO+MappableProtocol.swift"; sourceTree = "<group>"; };
 		EBD7900C2674FF000078D546 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		EBD7900E267503020078D546 /* URL+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Document.swift"; sourceTree = "<group>"; };
 		EBD79010267503E30078D546 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -237,6 +249,7 @@
 			children = (
 				EBC12FF82676BF100076D659 /* UIViewController.swift */,
 				EBC12FFA2676BF4C0076D659 /* String.swift */,
+				EBCE70732677CCDD008D691B /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD7902726751C580078D546 /* ProjectViewModel.swift */,
+				EBCE70712677C9ED008D691B /* ProjectDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -296,6 +310,7 @@
 			children = (
 				EBD7902326751A150078D546 /* Repository.swift */,
 				EBD7902526751A980078D546 /* ProjectRepository.swift */,
+				EBCE70772677D636008D691B /* SessionRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -305,6 +320,8 @@
 			children = (
 				EBD79016267507930078D546 /* ProjectDTO.swift */,
 				EBD7901B267508380078D546 /* ProjectDTO+MappableProtocol.swift */,
+				EBCE70792677D660008D691B /* SessionDTO.swift */,
+				EBCE707B2677D72B008D691B /* SessiontDTO+MappableProtocol.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -313,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD79014267505260078D546 /* Project.swift */,
+				EBCE70752677D422008D691B /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -487,20 +505,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC12FFB2676BF4C0076D659 /* String.swift in Sources */,
+				EBCE707C2677D72B008D691B /* SessiontDTO+MappableProtocol.swift in Sources */,
 				EBC1301A2677888F0076D659 /* StoryboardInitilizer+Coordinator.swift in Sources */,
 				EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */,
 				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,
+				EBCE707A2677D660008D691B /* SessionDTO.swift in Sources */,
+				EBCE70722677C9ED008D691B /* ProjectDetailsViewModel.swift in Sources */,
 				EBD790132675050F0078D546 /* Storable.swift in Sources */,
 				EBD7902426751A150078D546 /* Repository.swift in Sources */,
 				EBD79011267503E30078D546 /* DataManager.swift in Sources */,
 				EBC13016267788160076D659 /* AppCoordinator.swift in Sources */,
 				EBD79020267514CB0078D546 /* DBManager.swift in Sources */,
 				EBD7900D2674FF000078D546 /* RealmProvider.swift in Sources */,
+				EBCE70742677CCDD008D691B /* Date.swift in Sources */,
 				EBD79022267514F40078D546 /* DBManager+DataManager.swift in Sources */,
 				EBD7901E267511210078D546 /* RealmObject+Storable.swift in Sources */,
+				EBCE70782677D636008D691B /* SessionRepository.swift in Sources */,
 				EBC13018267788560076D659 /* StoryboardInitilizer.swift in Sources */,
 				EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */,
 				EBD7902826751C580078D546 /* ProjectViewModel.swift in Sources */,
+				EBCE70762677D422008D691B /* Session.swift in Sources */,
 				EBC13014267786A90076D659 /* Coordinator.swift in Sources */,
 				EBD7902626751A980078D546 /* ProjectRepository.swift in Sources */,
 				EB9823782672941A00939804 /* AppDelegate.swift in Sources */,

@@ -21,9 +21,10 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func goToProjectDetailsViewController(){
+    func goToProjectDetailsViewController(_ project: ProjectDTO){
         let vc = ProjectDetailsViewController.instantiate()
         vc.coordinator = self
+        vc.project = project
         navigationController.pushViewController(vc, animated: false)
     }
     

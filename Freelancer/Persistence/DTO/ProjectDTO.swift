@@ -10,5 +10,5 @@ import Foundation
 struct ProjectDTO {
     var name = ""
     var completed = false
-    var timeSpent = 0
+    var sessions = [SessiontDTO]()
 }

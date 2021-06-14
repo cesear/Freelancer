@@ -42,4 +42,8 @@ class Repository<T> {
     func getAll<T>(_ model: T.Type)-> Results<Object>? where T : Storable{
         return dbManager.getAll(model)
     }
+    
+    func update(object: Storable) throws {
+        try dbManager.update(object: object)
+    }
 }

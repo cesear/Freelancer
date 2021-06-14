@@ -60,4 +60,13 @@ extension DBManager: DataManager {
         guard let realm = realm, let model = model as? Object.Type else { return nil}
         return realm.objects(model)   
     }
+    
+    func update(object: Storable) throws {
+        guard let realm = realm, let object = object as? Object else {
+            throw RealmError.eitherRealmIsNilOrNotRealmSpecificModel
+        }
+        try realm.write {
+            realm.add(object,update: .all)
+        }
+    }
 }

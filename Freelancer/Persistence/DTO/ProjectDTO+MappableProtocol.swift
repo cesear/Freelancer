@@ -13,12 +13,16 @@ extension ProjectDTO: MappableProtocol{
         let model = Project()
         model.name = name
         model.completed = completed
-        model.timeSpent = timeSpent
+        model.sessions.append(objectsIn: sessions.map { $0.mapToPersistenceObject() })
         return model
     }
     
     static func mapFromPersistenceObject(_ project: Project) -> ProjectDTO {
-        return ProjectDTO(name: project.name, completed: project.completed, timeSpent: project.timeSpent)
+        var sessions = [SessiontDTO]()
+        project.sessions.forEach { (session) in
+            sessions.append(SessiontDTO.mapFromPersistenceObject(session))
+        }
+        return ProjectDTO(name: project.name, completed: project.completed, sessions: sessions)
     }
 
 }

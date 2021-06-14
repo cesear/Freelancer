@@ -14,6 +14,7 @@ class ProjectViewModel {
     let projectRepository: ProjectRepository
     var notificationToken: NotificationToken?
     var updateDataSourceHandler: (() -> Void)?
+    
     init(dbManager: DataManager = DBManager(RealmProvider.default)) {
         self.dbManager = dbManager
         self.projectRepository = ProjectRepository(dbManager: dbManager)
@@ -41,13 +42,17 @@ class ProjectViewModel {
         self.projectRepository.saveProject(projectDto)
     }
     
-    func saveProject(_ name: String, _ completed: Bool, _ timeSpent: Int) {
-        let projectDto = ProjectDTO.init(name: name, completed: completed, timeSpent: timeSpent)
+    func saveProject(_ name: String, _ completed: Bool, _ timeSpent: Double) {
+        let projectDto = ProjectDTO.init(name: name, completed: completed)
         if !exist(projectDto){
             self.saveProject(projectDto)
         } else{
             print("project_exist_error".localized)
         }
+    }
+    
+    func updateProject(_ projectDTO: ProjectDTO) {
+        self.projectRepository.update(projectDTO)
     }
     
     func getProjects()->[ProjectDTO]{

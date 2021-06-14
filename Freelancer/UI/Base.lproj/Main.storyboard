@@ -90,6 +90,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAv-dJ-cQr">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                         <state key="normal" title="Start progress"/>
+                                                        <connections>
+                                                            <action selector="startProgress:" destination="z2N-Fw-evH" eventType="touchUpInside" id="oBu-GA-YqU"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -142,6 +145,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyC-6l-JjV">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                         <state key="normal" title="Save"/>
+                                                        <connections>
+                                                            <action selector="saveTap:" destination="z2N-Fw-evH" eventType="touchUpInside" id="Yld-5b-9RH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -183,7 +189,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonSave" destination="PyC-6l-JjV" id="neW-lK-Oq5"/>
+                        <outlet property="buttonStartProgress" destination="QAv-dJ-cQr" id="BHo-zk-qI3"/>
+                        <outlet property="descriptionLabel" destination="5Sg-X4-uBX" id="Wi2-4P-3UX"/>
+                        <outlet property="descriptionTextView" destination="Fef-yI-W0p" id="MpP-pH-XPC"/>
+                        <outlet property="markProjectDoneLabel" destination="sPm-Fq-yee" id="BBZ-8C-oLD"/>
+                        <outlet property="projectDoneSwitch" destination="jFG-ev-zrP" id="rdF-qc-PTG"/>
                         <outlet property="scrollView" destination="EUk-bo-A5U" id="RRN-YV-5gp"/>
+                        <outlet property="timeSpentLabel" destination="BOw-JI-8G7" id="0H5-FJ-KyQ"/>
+                        <outlet property="timeSpentValueLabel" destination="BcE-gs-dsK" id="Jvv-Ce-Gpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ega-57-Uri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

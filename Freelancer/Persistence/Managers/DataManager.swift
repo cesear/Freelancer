@@ -14,5 +14,6 @@ protocol DataManager{
     func delete<T: Storable>(_ model: T.Type, object: Storable, predicate: NSPredicate?) throws
     func deleteAll<T: Storable>(_ model: T.Type) throws
     func getAll<T: Storable>(_ model:  T.Type) -> Results<Object>?
+    func update(object: Storable) throws
 }
 

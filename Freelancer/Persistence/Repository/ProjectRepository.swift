@@ -19,6 +19,7 @@ class ProjectRepository: Repository<Project>{
         catch { print(error.localizedDescription) }
     }
     
+    
     func getAllProjects(on sort: Sorted? = nil )->[ProjectDTO] {
         return super.fetch(Project.self, predicate: nil, sorted: sort).map({ ProjectDTO.mapFromPersistenceObject($0 as! Project) })
     }
@@ -34,6 +35,11 @@ class ProjectRepository: Repository<Project>{
     
     func deleteAll(){
         do { try super.deleteAll(Project.self) }
+        catch { print(error.localizedDescription) }
+    }
+    
+    func update(_ projectDTO: ProjectDTO){
+        do { try super.update(object: projectDTO.mapToPersistenceObject()) }
         catch { print(error.localizedDescription) }
     }
 }

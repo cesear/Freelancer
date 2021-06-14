@@ -11,9 +11,9 @@ import XCTest
 class ProjectTests: XCTestCase {
     
     var viewModel: ProjectViewModel!
-    let pythonProject = ProjectDTO.init(name: "Python", completed: false, timeSpent: 10)
-    let javatProject = ProjectDTO.init(name: "Java", completed: false, timeSpent: 15)
-    let swiftProject = ProjectDTO.init(name: "Swift", completed: false, timeSpent: 20)
+    let pythonProject = ProjectDTO.init(name: "Python", completed: false, timeSpent: 10.12)
+    let javatProject = ProjectDTO.init(name: "Java", completed: false, timeSpent: 15.15)
+    let swiftProject = ProjectDTO.init(name: "Swift", completed: false, timeSpent: 20.24)
     override func setUp() {
         self.viewModel = ProjectViewModel()
         self.viewModel.deleteProjects()

@@ -16,7 +16,7 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = viewModel.getProjects()
-        self.viewModel.updateDataSourceHandler = { [weak self] in self?.shouldUpdate() }
+        self.viewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
         let addButton = UIBarButtonItem(title: "add".localized, style: .plain, target: self, action: #selector(addTapped))
         addButton.title = "add_project_title".localized
         self.navigationItem.rightBarButtonItem = addButton
@@ -53,7 +53,9 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
         cell.textLabel?.text = "Project: \(self.dataSource[indexPath.row].name)"
-        cell.detailTextLabel?.text = "Amount spent: \(self.dataSource[indexPath.row].timeSpent)"
+        let sessions = self.dataSource[indexPath.row].sessions
+        let timeSpent = sessions.map({$0.sessionLength}).reduce(0, +)
+        cell.detailTextLabel?.text = "Amount spent: \(timeSpent)"
         return cell
     }
     
@@ -74,7 +76,7 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.coordinator?.goToProjectDetailsViewController()
+        self.coordinator?.goToProjectDetailsViewController(dataSource[indexPath.row])
     }
     //MARK: Helpers
     
@@ -91,7 +93,7 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         })
     }
     
-    func shouldUpdate(){
+    func didUpdate(){
         self.dataSource = self.viewModel.getProjects()
         self.tableView.reloadData()
     }
