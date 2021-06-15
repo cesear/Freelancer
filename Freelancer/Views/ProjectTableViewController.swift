@@ -19,8 +19,9 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         self.dataSource = viewModel.dataSource()
         self.viewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
         let addButton = UIBarButtonItem(title: "add".localized, style: .plain, target: self, action: #selector(addTapped))
-        addButton.title = "add_project_title".localized
         self.navigationItem.rightBarButtonItem = addButton
+        let archivedButton = UIBarButtonItem(title: "archived".localized, style: .plain, target: self, action: #selector(archivedTapped))
+        self.navigationItem.leftBarButtonItem = archivedButton
         self.title = "projects".localized
         self.tableView.tableFooterView = UIView()
         // Test data
@@ -130,6 +131,10 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
                 
             }
         })
+    }
+    
+    @objc private func archivedTapped() {
+        coordinator?.goToProjectArchive()
     }
     
     func didUpdate(){

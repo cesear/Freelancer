@@ -32,6 +32,12 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func goToProjectArchive(){
+        let vc = ArchivedProjectsTableViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
     func didFinish(_ coordinator: Coordinator) {
         self.childCoordinators.removeAll(where: { $0 === coordinator })
     }

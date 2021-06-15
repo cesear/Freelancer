@@ -21,6 +21,7 @@
 		EBA221832678D8160043EB98 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221822678D8160043EB98 /* UIButton.swift */; };
 		EBA221852678D8260043EB98 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221842678D8260043EB98 /* UITextView.swift */; };
 		EBA221872679337B0043EB98 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221862679337B0043EB98 /* Double.swift */; };
+		EBA22189267948B20043EB98 /* ArchivedProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA22188267948B20043EB98 /* ArchivedProjectsTableViewController.swift */; };
 		EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */; };
 		EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF82676BF100076D659 /* UIViewController.swift */; };
 		EBC12FFB2676BF4C0076D659 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FFA2676BF4C0076D659 /* String.swift */; };
@@ -88,6 +89,7 @@
 		EBA221822678D8160043EB98 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		EBA221842678D8260043EB98 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EBA221862679337B0043EB98 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		EBA22188267948B20043EB98 /* ArchivedProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedProjectsTableViewController.swift; sourceTree = "<group>"; };
 		EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
 		EBC12FF82676BF100076D659 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EBC12FFA2676BF4C0076D659 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */,
+				EBA22188267948B20043EB98 /* ArchivedProjectsTableViewController.swift */,
 				EBC1301B2677896F0076D659 /* ProjectDetailsViewController.swift */,
 			);
 			path = Views;
@@ -517,6 +520,7 @@
 				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,
 				EBCE707A2677D660008D691B /* SessionDTO.swift in Sources */,
 				EBCE70722677C9ED008D691B /* ProjectDetailsViewModel.swift in Sources */,
+				EBA22189267948B20043EB98 /* ArchivedProjectsTableViewController.swift in Sources */,
 				EBD790132675050F0078D546 /* Storable.swift in Sources */,
 				EBD7902426751A150078D546 /* Repository.swift in Sources */,
 				EBD79011267503E30078D546 /* DataManager.swift in Sources */,
