@@ -29,13 +29,12 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     var buttonState: State = .stopped
     
     // MARK: LifeCycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Project session"
         self.navigationItem.hidesBackButton = true
         self.projectViewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
-        
+        self.descriptionTextView.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))     
     }
     
     override func loadView() {
@@ -60,6 +59,10 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     }
     
     // MARK: IBActions
+    
+    @objc func tapDone(sender: Any) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func startProgress(_ sender: Any) {
         if buttonState == .stopped{
