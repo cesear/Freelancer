@@ -17,6 +17,9 @@
 		EB9823B72672972A00939804 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B62672972A00939804 /* RealmSwift */; };
 		EB9823B92672972A00939804 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B82672972A00939804 /* Realm */; };
 		EB9823BE26729BB600939804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB9823BD26729BB600939804 /* README.md */; };
+		EBA221812678D4F00043EB98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221802678D4F00043EB98 /* Theme.swift */; };
+		EBA221832678D8160043EB98 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221822678D8160043EB98 /* UIButton.swift */; };
+		EBA221852678D8260043EB98 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221842678D8260043EB98 /* UITextView.swift */; };
 		EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */; };
 		EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF82676BF100076D659 /* UIViewController.swift */; };
 		EBC12FFB2676BF4C0076D659 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FFA2676BF4C0076D659 /* String.swift */; };
@@ -80,6 +83,9 @@
 		EB9823992672942500939804 /* FreelancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelancerUITests.swift; sourceTree = "<group>"; };
 		EB98239B2672942500939804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9823BD26729BB600939804 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EBA221802678D4F00043EB98 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		EBA221822678D8160043EB98 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		EBA221842678D8260043EB98 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
 		EBC12FF82676BF100076D659 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EBC12FFA2676BF4C0076D659 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC130092676C4180076D659 /* Extensions */,
+				EBA221802678D4F00043EB98 /* Theme.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -250,6 +257,8 @@
 				EBC12FF82676BF100076D659 /* UIViewController.swift */,
 				EBC12FFA2676BF4C0076D659 /* String.swift */,
 				EBCE70732677CCDD008D691B /* Date.swift */,
+				EBA221822678D8160043EB98 /* UIButton.swift */,
+				EBA221842678D8260043EB98 /* UITextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -507,6 +516,7 @@
 				EBC12FFB2676BF4C0076D659 /* String.swift in Sources */,
 				EBCE707C2677D72B008D691B /* SessiontDTO+MappableProtocol.swift in Sources */,
 				EBC1301A2677888F0076D659 /* StoryboardInitilizer+Coordinator.swift in Sources */,
+				EBA221832678D8160043EB98 /* UIButton.swift in Sources */,
 				EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */,
 				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,
 				EBCE707A2677D660008D691B /* SessionDTO.swift in Sources */,
@@ -520,6 +530,7 @@
 				EBCE70742677CCDD008D691B /* Date.swift in Sources */,
 				EBD79022267514F40078D546 /* DBManager+DataManager.swift in Sources */,
 				EBD7901E267511210078D546 /* RealmObject+Storable.swift in Sources */,
+				EBA221812678D4F00043EB98 /* Theme.swift in Sources */,
 				EBCE70782677D636008D691B /* SessionRepository.swift in Sources */,
 				EBC13018267788560076D659 /* StoryboardInitilizer.swift in Sources */,
 				EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */,
@@ -527,6 +538,7 @@
 				EBCE70762677D422008D691B /* Session.swift in Sources */,
 				EBC13014267786A90076D659 /* Coordinator.swift in Sources */,
 				EBD7902626751A980078D546 /* ProjectRepository.swift in Sources */,
+				EBA221852678D8260043EB98 /* UITextView.swift in Sources */,
 				EB9823782672941A00939804 /* AppDelegate.swift in Sources */,
 				EB98237A2672941A00939804 /* SceneDelegate.swift in Sources */,
 				EBD7901A267508060078D546 /* MappableProtocol.swift in Sources */,

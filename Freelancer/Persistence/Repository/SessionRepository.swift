@@ -36,6 +36,4 @@ class SessionRepository: Repository<Session>{
         do { try super.deleteAll(Session.self) }
         catch { print(error.localizedDescription) }
     }
-
-    
 }

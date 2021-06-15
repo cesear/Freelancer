@@ -15,6 +15,7 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         self.dataSource = viewModel.getProjects()
         self.viewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
         let addButton = UIBarButtonItem(title: "add".localized, style: .plain, target: self, action: #selector(addTapped))
@@ -52,9 +53,8 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
-        cell.textLabel?.text = "Project: \(self.dataSource[indexPath.row].name)"
-        let sessions = self.dataSource[indexPath.row].sessions
-        let timeSpent = sessions.map({$0.sessionLength}).reduce(0, +)
+        cell.textLabel?.text = "Project: \(self.dataSource[indexPath.row].name)  is  \(self.dataSource[indexPath.row].completed ? "Done" :"in progress") "
+        let timeSpent = self.viewModel.timeSpent(self.dataSource[indexPath.row])
         cell.detailTextLabel?.text = "Amount spent: \(timeSpent)"
         return cell
     }
@@ -66,6 +66,11 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
                 self.viewModel.deleteProject(project)
             }, cancelButtonTitle: "Cancel", nil)
         }
+        
+        /*let contextItem = UIContextualAction(style: .destructive, title: "Mark as done") {  (contextualAction, view, boolValue) in
+            let project = self.dataSource[indexPath.row]
+
+        }*/
         let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
         
         return swipeActions

@@ -16,15 +16,19 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = ProjectTableViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        self.goToProjectList()
     }
     
     func goToProjectDetailsViewController(_ project: ProjectDTO){
         let vc = ProjectDetailsViewController.instantiate()
         vc.coordinator = self
         vc.project = project
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func goToProjectList(){
+        let vc = ProjectTableViewController.instantiate()
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     

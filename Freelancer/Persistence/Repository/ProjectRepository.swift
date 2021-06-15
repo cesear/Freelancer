@@ -24,6 +24,10 @@ class ProjectRepository: Repository<Project>{
         return super.fetch(Project.self, predicate: nil, sorted: sort).map({ ProjectDTO.mapFromPersistenceObject($0 as! Project) })
     }
     
+    func getProject(on sort: Sorted? = nil, predicate: NSPredicate)->ProjectDTO? {
+        return (super.fetch(Project.self, predicate: predicate, sorted: sort).map({ ProjectDTO.mapFromPersistenceObject($0 as! Project) })).first
+    }
+    
     func getAll(on sort: Sorted? = nil )->Results<Object>? {
         return super.getAll(Project.self)
     }

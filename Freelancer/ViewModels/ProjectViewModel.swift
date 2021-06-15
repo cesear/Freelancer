@@ -14,10 +14,11 @@ class ProjectViewModel {
     let projectRepository: ProjectRepository
     var notificationToken: NotificationToken?
     var updateDataSourceHandler: (() -> Void)?
-    
+    let sessionRepository: SessionRepository
     init(dbManager: DataManager = DBManager(RealmProvider.default)) {
         self.dbManager = dbManager
         self.projectRepository = ProjectRepository(dbManager: dbManager)
+        self.sessionRepository = SessionRepository(dbManager: dbManager)
     }
     
     func bind(){
@@ -65,6 +66,25 @@ class ProjectViewModel {
     
     func deleteProject(_ projectDto: ProjectDTO) {
         self.projectRepository.delete(projectDto)
+    }
+    
+    // duration is a session duration
+    func updateProject(_ name: String, _ description: String, _ completed: Bool, _ sessionLength: Double) {
+        let predicate = NSPredicate(format: "name == %@", name)
+        if let projectDto = self.projectRepository.getProject(predicate: predicate){
+            var projectDto = projectDto
+            projectDto.sessions.append(SessiontDTO(sessionLength: sessionLength, sessionDescription: description))
+            projectDto.completed = completed
+            self.projectRepository.update(projectDto)
+        }
+    }
+    
+    func getSessions()->[SessiontDTO]{
+        return self.sessionRepository.getAllSessions()
+    }
+    
+    func timeSpent(_ project: ProjectDTO)->Double{
+        return project.sessions.map({$0.sessionLength}).reduce(0, +)
     }
     
     func observeChanges(){
