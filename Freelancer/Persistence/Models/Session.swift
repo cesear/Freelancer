@@ -12,6 +12,7 @@ class Session: Object{
     @objc dynamic var sessionLength: Double = 0.0
     @objc dynamic var sessionDescription = ""
     @objc dynamic var sessionId = ""
+    @objc dynamic var invoiced: Bool = false
 
     override static func primaryKey() -> String? {
         return "sessionId"

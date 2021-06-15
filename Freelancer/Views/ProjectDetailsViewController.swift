@@ -31,7 +31,7 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Project session"
+        self.title = project.name
         self.navigationItem.hidesBackButton = true
         self.projectViewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
         self.descriptionTextView.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))     
@@ -65,6 +65,7 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     }
     
     @IBAction func startProgress(_ sender: Any) {
+        print(projectViewModel.invoice(self.project))
         if buttonState == .stopped{
             projectDetailsViewModel.startDate = Date()
             buttonState = .started

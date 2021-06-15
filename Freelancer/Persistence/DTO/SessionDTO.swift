@@ -11,5 +11,6 @@ struct SessiontDTO {
     var sessionLength = 0.0
     var sessionDescription = ""
     var sessionId = ""
+    var invoiced = false
 }
 

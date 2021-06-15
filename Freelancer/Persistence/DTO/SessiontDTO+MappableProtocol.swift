@@ -15,11 +15,12 @@ extension SessiontDTO: MappableProtocol{
         model.sessionLength = sessionLength
         model.sessionDescription = sessionDescription
         model.sessionId = sessionId
+        model.invoiced = invoiced
         return model
     }
     
     static func mapFromPersistenceObject(_ object: Session) -> SessiontDTO {
-        return SessiontDTO(sessionLength: object.sessionLength, sessionDescription: object.sessionDescription, sessionId: object.sessionId)
+        return SessiontDTO(sessionLength: object.sessionLength, sessionDescription: object.sessionDescription, sessionId: object.sessionId, invoiced: object.invoiced)
     }
     
 }

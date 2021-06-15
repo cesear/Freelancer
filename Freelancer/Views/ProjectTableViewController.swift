@@ -29,7 +29,6 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         viewModel.saveProject("Flutter", false, 15)*/
         let projects = viewModel.getProjects()
         print("projects \(projects.map({$0.name}))")
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,25 +42,11 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        //return self.dataSource.filter({$0.completed == true}).count > 0 ? 2 : 1
-        if self.dataSource.filter({$0.completed}).count > 0{
-            return 2
-        } else{
-            return 1
-        }
+        return self.dataSource.filter({$0.completed == true}).count > 0 ? 2 : 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*return section == 0 ? self.dataSource.filter({!$0.completed}).count : self.dataSource.filter({$0.completed}).count*/
-        if section == 0{
-            print("Uncompleted ",self.dataSource.filter({!$0.completed}).count)
-            print("Uncompleted ", self.dataSource.filter({!$0.completed}))
-            return self.dataSource.filter({!$0.completed}).count
-        } else{
-            print("completed ",self.dataSource.filter({$0.completed}).count)
-            print("completed ", self.dataSource.filter({$0.completed}))
-            return self.dataSource.filter({$0.completed}).count
-        }
+        return section == 0 ? self.dataSource.filter({!$0.completed}).count : self.dataSource.filter({$0.completed}).count
     }
     
     
@@ -89,7 +74,20 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
                 self.viewModel.deleteProject(project)
             }, cancelButtonTitle: "Cancel", nil)
         }
-        let swipeActions = UISwipeActionsConfiguration(actions: [deleteContextAction])
+        
+        let invoiceContextAction = UIContextualAction(style: .normal, title: "Invoice") {  (contextualAction, view, boolValue) in
+            let project = indexPath.section == 0 ? self.dataSource.filter({!$0.completed})[indexPath.row] : self.dataSource.filter({$0.completed})[indexPath.row]
+            let amount = self.viewModel.invoicedAmount(project)
+            if amount > 0{
+                self.showAlertWithTwoButtons("Invoice \(project.name)",  "Are you sure you want to invoice \(amount) dkk ?", okButtonTitle: "Ok", {
+                    self.viewModel.invoice(project)
+                }, cancelButtonTitle: "Cancel", nil)
+            } else{
+                self.showAlertWithOneButton("Unable to invoice amount", self.viewModel.timeSpent(project) > 0 ? "Amount was already invoiced" : "Log work sessions before requesting an invoice")
+            }
+
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteContextAction, invoiceContextAction])
         return swipeActions
     }
     
@@ -140,4 +138,7 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         self.dataSource = self.viewModel.getProjects()
         self.tableView.reloadData()
     }
+    
+
 }
+

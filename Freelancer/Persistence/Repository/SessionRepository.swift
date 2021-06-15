@@ -36,4 +36,9 @@ class SessionRepository: Repository<Session>{
         do { try super.deleteAll(Session.self) }
         catch { print(error.localizedDescription) }
     }
+    
+    func update(_ sessiontDTO: SessiontDTO){
+        do { try super.update(object: sessiontDTO.mapToPersistenceObject()) }
+        catch { print(error.localizedDescription) }
+    }
 }

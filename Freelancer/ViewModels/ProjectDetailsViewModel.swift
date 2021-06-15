@@ -9,6 +9,12 @@ import Foundation
 
 class ProjectDetailsViewModel{
     var startDate: Date?
+    let sessionRepository: SessionRepository
+    let dbManager: DataManager
+    init (dbManager: DataManager = DBManager(RealmProvider.default)) {
+        self.dbManager = dbManager
+        self.sessionRepository = SessionRepository(dbManager: dbManager)
+    }
     var endDate: Date?{
         didSet{
             self.calculateSessionDuration()
@@ -27,4 +33,7 @@ class ProjectDetailsViewModel{
         }
         self.sessionDuration = self.sessionDuration + Double(endDate.numberOfMinutes(from: startDate)) / 60
     }
+    
+
+    
 }

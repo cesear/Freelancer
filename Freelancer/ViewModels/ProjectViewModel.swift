@@ -10,6 +10,7 @@ import RealmSwift
 
 class ProjectViewModel {
     
+    let hourlyBasePrice: Double = 500.0
     let dbManager: DataManager
     let projectRepository: ProjectRepository
     var notificationToken: NotificationToken?
@@ -98,6 +99,25 @@ class ProjectViewModel {
         return project.sessions.map({$0.sessionLength}).reduce(0, +)
     }
     
+    func getNonInvoiceSessions(_ project: ProjectDTO)->[SessiontDTO]{
+        return project.sessions.filter({!$0.invoiced})
+    }
+    
+    func invoicedAmount(_ project: ProjectDTO)->Double{
+        return  getNonInvoiceSessions(project).map({$0.sessionLength}).reduce(0, +) * hourlyBasePrice
+    }
+    
+    func invoice(_ project: ProjectDTO){
+        let sessions = getNonInvoiceSessions(project)
+        print(sessions)
+        for session in sessions{
+            var session = session
+            session.invoiced = true
+            self.sessionRepository.update(session)
+        }
+        let updatedSessions = getNonInvoiceSessions(project)
+        print(updatedSessions)
+    }
     func observeChanges(){
         if let results = self.projectRepository.getAll(){
             notificationToken = results.observe { [weak self] (changes: RealmCollectionChange) in
@@ -105,5 +125,18 @@ class ProjectViewModel {
                 self?.updateDataSourceHandler?()
             }
         }
+    }
+    
+    // MARK: Helpers
+    
+    func dataSource()->[String:[ProjectDTO]]{
+        let projects = self.getProjects()
+        let dataSource = projects.reduce([String: [ProjectDTO]]()) { (dict, project) -> [String: [ProjectDTO]] in
+            var dict = dict
+            dict["done"] = projects.filter({$0.completed})
+            dict["progress"] = projects.filter({!$0.completed})
+            return dict
+        }
+        return dataSource
     }
 }
