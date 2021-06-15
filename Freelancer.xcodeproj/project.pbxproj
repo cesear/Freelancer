@@ -29,7 +29,7 @@
 		EBC13014267786A90076D659 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC13013267786A90076D659 /* Coordinator.swift */; };
 		EBC13016267788160076D659 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC13015267788160076D659 /* AppCoordinator.swift */; };
 		EBC13018267788560076D659 /* StoryboardInitilizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC13017267788560076D659 /* StoryboardInitilizer.swift */; };
-		EBC1301A2677888F0076D659 /* StoryboardInitilizer+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC130192677888F0076D659 /* StoryboardInitilizer+Coordinator.swift */; };
+		EBC1301A2677888F0076D659 /* StoryboardInitilizer+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC130192677888F0076D659 /* StoryboardInitilizer+UIViewController.swift */; };
 		EBC1301C2677896F0076D659 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1301B2677896F0076D659 /* ProjectDetailsViewController.swift */; };
 		EBCE70722677C9ED008D691B /* ProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70712677C9ED008D691B /* ProjectDetailsViewModel.swift */; };
 		EBCE70742677CCDD008D691B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE70732677CCDD008D691B /* Date.swift */; };
@@ -98,7 +98,7 @@
 		EBC13013267786A90076D659 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EBC13015267788160076D659 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EBC13017267788560076D659 /* StoryboardInitilizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitilizer.swift; sourceTree = "<group>"; };
-		EBC130192677888F0076D659 /* StoryboardInitilizer+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardInitilizer+Coordinator.swift"; sourceTree = "<group>"; };
+		EBC130192677888F0076D659 /* StoryboardInitilizer+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardInitilizer+UIViewController.swift"; sourceTree = "<group>"; };
 		EBC1301B2677896F0076D659 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		EBCE70712677C9ED008D691B /* ProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModel.swift; sourceTree = "<group>"; };
 		EBCE70732677CCDD008D691B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 				EBC13013267786A90076D659 /* Coordinator.swift */,
 				EBC13015267788160076D659 /* AppCoordinator.swift */,
 				EBC13017267788560076D659 /* StoryboardInitilizer.swift */,
-				EBC130192677888F0076D659 /* StoryboardInitilizer+Coordinator.swift */,
+				EBC130192677888F0076D659 /* StoryboardInitilizer+UIViewController.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -514,7 +514,7 @@
 				EBA221872679337B0043EB98 /* Double.swift in Sources */,
 				EBC12FFB2676BF4C0076D659 /* String.swift in Sources */,
 				EBCE707C2677D72B008D691B /* SessiontDTO+MappableProtocol.swift in Sources */,
-				EBC1301A2677888F0076D659 /* StoryboardInitilizer+Coordinator.swift in Sources */,
+				EBC1301A2677888F0076D659 /* StoryboardInitilizer+UIViewController.swift in Sources */,
 				EBA221832678D8160043EB98 /* UIButton.swift in Sources */,
 				EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */,
 				EBD7900F267503020078D546 /* URL+Document.swift in Sources */,

@@ -123,6 +123,6 @@ class ProjectViewModel {
     // MARK: Helpers
     func dataSource()->([ProjectDTO], [ProjectDTO]){
         let projects = self.getProjects()
-        return (projects.filter({!$0.completed}), projects.filter({$0.completed}))
+        return (projects.filter({!$0.completed}).sorted(by: { $1.name > $0.name }), projects.filter({$0.completed}).sorted(by: { $1.name > $0.name }))
     }
 }

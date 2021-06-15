@@ -1,5 +1,5 @@
 //
-//  StoryboardInitilizer+Coordinator.swift
+//  StoryboardInitilizer+UIViewController.swift
 //  Freelancer
 //
 //  Created by Kais Segni on 14/06/2021.

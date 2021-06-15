@@ -24,10 +24,14 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         self.navigationItem.leftBarButtonItem = archivedButton
         self.title = "projects".localized
         self.tableView.tableFooterView = UIView()
+        // Stress test
+        /*for i in 1...100000{
+            viewModel.saveProject("#\(i)", false)
+        }*/
         // Test data
-        /*viewModel.saveProject("Swift", false, 20)
-        viewModel.saveProject("Paython", false, 10)
-        viewModel.saveProject("Flutter", false, 15)*/
+        /*viewModel.saveProject("Swift", false)
+        viewModel.saveProject("Paython", false)
+        viewModel.saveProject("Flutter", false)*/
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
