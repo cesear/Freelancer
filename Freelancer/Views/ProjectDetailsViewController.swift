@@ -22,7 +22,6 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     @IBOutlet weak var projectDoneSwitch: UISwitch!
     let projectDetailsViewModel = ProjectDetailsViewModel()
     let projectViewModel = ProjectViewModel()
-    
     enum State{
         case started
         case stopped
