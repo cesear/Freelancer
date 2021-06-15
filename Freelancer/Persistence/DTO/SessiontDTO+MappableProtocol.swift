@@ -14,7 +14,7 @@ extension SessiontDTO: MappableProtocol{
         let model = Session()
         model.sessionLength = sessionLength
         model.sessionDescription = sessionDescription
-        model.sessionId = UUID().uuidString
+        model.sessionId = sessionId
         return model
     }
     

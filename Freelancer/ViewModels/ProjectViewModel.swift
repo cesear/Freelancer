@@ -64,8 +64,14 @@ class ProjectViewModel {
         self.projectRepository.deleteAll()
     }
     
+    // Cascade deleting should be implemented 
     func deleteProject(_ projectDto: ProjectDTO) {
+        let sessions = projectDto.sessions
         self.projectRepository.delete(projectDto)
+        for session in sessions{
+            let predicate =  NSPredicate(format: "sessionId == %@", session.sessionId)
+            self.sessionRepository.delete(session, predicate: predicate)
+        }
     }
     
     // duration is a session duration

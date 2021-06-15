@@ -78,8 +78,7 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
         
     }
     @IBAction func saveTap(_ sender: Any) {
-        coordinator?.start()
-        //coordinator?.didFinish(self)
+        coordinator?.goToProjectList()
     }
     
     // MARK: Observable

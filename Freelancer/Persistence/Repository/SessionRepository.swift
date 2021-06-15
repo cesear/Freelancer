@@ -27,8 +27,8 @@ class SessionRepository: Repository<Session>{
         return super.getAll(Session.self)
     }
     
-    func delete(_ sessiontDTO: SessiontDTO){
-        do { try super.delete(Session.self, object: sessiontDTO.mapToPersistenceObject(), predicate: nil) }
+    func delete(_ sessiontDTO: SessiontDTO, predicate: NSPredicate){
+        do { try super.delete(Session.self, object: sessiontDTO.mapToPersistenceObject(), predicate: predicate) }
         catch { print(error.localizedDescription) }
     }
     
