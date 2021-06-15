@@ -24,9 +24,9 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         self.title = "projects".localized
         self.tableView.tableFooterView = UIView()
         // Test data
-        viewModel.saveProject("Swift", false, 20)
+        /*viewModel.saveProject("Swift", false, 20)
         viewModel.saveProject("Paython", false, 10)
-        viewModel.saveProject("Flutter", false, 15)
+        viewModel.saveProject("Flutter", false, 15)*/
         let projects = viewModel.getProjects()
         print("projects \(projects.map({$0.name}))")
         
@@ -43,36 +43,53 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        //return self.dataSource.filter({$0.completed == true}).count > 0 ? 2 : 1
+        if self.dataSource.filter({$0.completed}).count > 0{
+            return 2
+        } else{
+            return 1
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataSource.count
+        /*return section == 0 ? self.dataSource.filter({!$0.completed}).count : self.dataSource.filter({$0.completed}).count*/
+        if section == 0{
+            print("Uncompleted ",self.dataSource.filter({!$0.completed}).count)
+            print("Uncompleted ", self.dataSource.filter({!$0.completed}))
+            return self.dataSource.filter({!$0.completed}).count
+        } else{
+            print("completed ",self.dataSource.filter({$0.completed}).count)
+            print("completed ", self.dataSource.filter({$0.completed}))
+            return self.dataSource.filter({$0.completed}).count
+        }
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
-        cell.textLabel?.text = "Project: \(self.dataSource[indexPath.row].name)  is  \(self.dataSource[indexPath.row].completed ? "Done" :"in progress") "
-        let timeSpent = self.viewModel.timeSpent(self.dataSource[indexPath.row])
-        cell.detailTextLabel?.text = "Amount spent: \(timeSpent)"
-        return cell
+        if indexPath.section == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
+            cell.textLabel?.text = "Project: \(self.dataSource.filter({!$0.completed})[indexPath.row].name)"
+            let timeSpent = self.viewModel.timeSpent(self.dataSource.filter({!$0.completed})[indexPath.row])
+            cell.detailTextLabel?.text = "Amount spent: \(timeSpent)"
+            return cell
+        } else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "project", for: indexPath)
+            cell.textLabel?.text = "Project: \(self.dataSource.filter({$0.completed})[indexPath.row].name)"
+            let timeSpent = self.viewModel.timeSpent(self.dataSource.filter({$0.completed})[indexPath.row])
+            cell.detailTextLabel?.text = "Amount spent: \(timeSpent)"
+            return cell
+        }
+
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let contextItem = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
+        let deleteContextAction = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
             let project = self.dataSource[indexPath.row]
             self.showAlertWithTwoButtons("Delete \(project.name)",  "Are you sure you want to delete \(project.name) ?", okButtonTitle: "Ok", {
                 self.viewModel.deleteProject(project)
             }, cancelButtonTitle: "Cancel", nil)
         }
-        
-        /*let contextItem = UIContextualAction(style: .destructive, title: "Mark as done") {  (contextualAction, view, boolValue) in
-            let project = self.dataSource[indexPath.row]
-
-        }*/
-        let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
-        
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteContextAction])
         return swipeActions
     }
     
@@ -81,8 +98,29 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.coordinator?.goToProjectDetailsViewController(dataSource[indexPath.row])
+        if indexPath.section == 0{
+            self.coordinator?.goToProjectDetailsViewController(dataSource.filter({!$0.completed})[indexPath.row])
+        } else{
+            self.coordinator?.goToProjectDetailsViewController(dataSource.filter({$0.completed})[indexPath.row])
+        }
+        
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var title: String?
+        if section == 0  {
+            if dataSource.filter({!$0.completed}).count > 0{
+                title = "In progress"
+            }
+        }
+        if section == 1  {
+            if dataSource.filter({$0.completed}).count > 0{
+                title = "Completed"
+            }
+        }
+        return title
+    }
+    
     //MARK: Helpers
     
     @objc private func addTapped() {

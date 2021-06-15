@@ -79,9 +79,14 @@ class ProjectViewModel {
         let predicate = NSPredicate(format: "name == %@", name)
         if let projectDto = self.projectRepository.getProject(predicate: predicate){
             var projectDto = projectDto
-            projectDto.sessions.append(SessiontDTO(sessionLength: sessionLength, sessionDescription: description))
+            if sessionLength > 0 {
+                projectDto.sessions.append(SessiontDTO(sessionLength: sessionLength, sessionDescription: description))
+            }
             projectDto.completed = completed
             self.projectRepository.update(projectDto)
+            if let projectDto = self.projectRepository.getProject(predicate: predicate){
+                print(projectDto.completed)
+            }
         }
     }
     

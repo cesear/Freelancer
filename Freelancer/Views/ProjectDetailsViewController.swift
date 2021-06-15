@@ -43,6 +43,7 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
         self.buttonStartProgress.style()
         self.buttonSave.style()
         self.descriptionTextView.style()
+        self.projectDoneSwitch.isOn = project.completed
         self.timeSpentValueLabel.text = String("\(self.projectViewModel.timeSpent(self.project)) hours")
         
     }
