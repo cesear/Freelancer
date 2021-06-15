@@ -91,12 +91,6 @@
 		EBC12FFA2676BF4C0076D659 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		EBC130002676C01E0076D659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBC130022676C03C0076D659 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EBC130032676C20C0076D659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
-		EBC130042676C20D0076D659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		EBC130052676C20D0076D659 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		EBC130062676C2EF0076D659 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Main.strings"; sourceTree = "<group>"; };
-		EBC130072676C2EF0076D659 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		EBC130082676C2EF0076D659 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EBC13013267786A90076D659 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EBC13015267788160076D659 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EBC13017267788560076D659 /* StoryboardInitilizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitilizer.swift; sourceTree = "<group>"; };
@@ -461,8 +455,6 @@
 				en,
 				Base,
 				fr,
-				"en-GB",
-				"en-US",
 			);
 			mainGroup = EB98236B2672941900939804;
 			packageReferences = (
@@ -585,8 +577,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB98237E2672941A00939804 /* Base */,
-				EBC130032676C20C0076D659 /* en-GB */,
-				EBC130062676C2EF0076D659 /* en-US */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -595,8 +585,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB9823832672942400939804 /* Base */,
-				EBC130042676C20D0076D659 /* en-GB */,
-				EBC130072676C2EF0076D659 /* en-US */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -606,8 +594,6 @@
 			children = (
 				EBC130002676C01E0076D659 /* en */,
 				EBC130022676C03C0076D659 /* fr */,
-				EBC130052676C20D0076D659 /* en-GB */,
-				EBC130082676C2EF0076D659 /* en-US */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
