@@ -138,7 +138,5 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         self.dataSource = self.viewModel.getProjects()
         self.tableView.reloadData()
     }
-    
-
 }
 
