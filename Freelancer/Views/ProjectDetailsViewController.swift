@@ -33,7 +33,6 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
         super.viewDidLoad()
         self.title = project.name
         self.navigationItem.hidesBackButton = true
-        self.projectViewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
         self.descriptionTextView.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))     
     }
     
@@ -49,12 +48,10 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.projectViewModel.bind()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.projectViewModel.updateProject(project.name, self.descriptionTextView.text, self.projectDoneSwitch.isOn, self.projectDetailsViewModel.sessionDuration)
-        self.projectViewModel.unbind()
         super.viewWillDisappear(animated)
     }
     
@@ -65,7 +62,6 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     }
     
     @IBAction func startProgress(_ sender: Any) {
-        print(projectViewModel.invoice(self.project))
         if buttonState == .stopped{
             projectDetailsViewModel.startDate = Date()
             buttonState = .started
@@ -73,7 +69,7 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
             self.buttonStartProgress.backgroundColor = Theme.Color.buttonStateStoped
         } else {
             let calendar = Calendar.current
-            let date = calendar.date(byAdding: .minute, value: 123, to: Date())
+            let date = calendar.date(byAdding: .minute, value: 60, to: Date())
             projectDetailsViewModel.endDate = date
             buttonState = .stopped
             self.buttonStartProgress.setTitle("Start Progress", for: .normal)
@@ -84,12 +80,6 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     }
     @IBAction func saveTap(_ sender: Any) {
         coordinator?.goToProjectList()
-    }
-    
-    // MARK: Observable
-    
-    func didUpdate(){
-        print(self.projectViewModel.getSessions().map({$0.sessionId}))
     }
 }
 

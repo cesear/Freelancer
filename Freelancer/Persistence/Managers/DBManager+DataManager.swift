@@ -66,7 +66,7 @@ extension DBManager: DataManager {
             throw RealmError.eitherRealmIsNilOrNotRealmSpecificModel
         }
         try realm.write {
-            realm.add(object,update: .all)
+            realm.add(object,update: .modified)
         }
     }
 }

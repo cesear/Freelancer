@@ -44,7 +44,7 @@ class ProjectViewModel {
         self.projectRepository.saveProject(projectDto)
     }
     
-    func saveProject(_ name: String, _ completed: Bool, _ timeSpent: Double) {
+    func saveProject(_ name: String, _ completed: Bool) {
         let projectDto = ProjectDTO.init(name: name, completed: completed)
         if !exist(projectDto){
             self.saveProject(projectDto)
@@ -85,9 +85,6 @@ class ProjectViewModel {
             }
             projectDto.completed = completed
             self.projectRepository.update(projectDto)
-            if let projectDto = self.projectRepository.getProject(predicate: predicate){
-                print(projectDto.completed)
-            }
         }
     }
     
@@ -96,7 +93,7 @@ class ProjectViewModel {
     }
     
     func timeSpent(_ project: ProjectDTO)->Double{
-        return project.sessions.map({$0.sessionLength}).reduce(0, +)
+        return project.sessions.map({$0.sessionLength}).reduce(0, +).rounded()
     }
     
     func getNonInvoiceSessions(_ project: ProjectDTO)->[SessiontDTO]{
@@ -104,39 +101,28 @@ class ProjectViewModel {
     }
     
     func invoicedAmount(_ project: ProjectDTO)->Double{
-        return  getNonInvoiceSessions(project).map({$0.sessionLength}).reduce(0, +) * hourlyBasePrice
+        return  (getNonInvoiceSessions(project).map({$0.sessionLength}).reduce(0, +) * hourlyBasePrice).rounded()
     }
     
     func invoice(_ project: ProjectDTO){
         let sessions = getNonInvoiceSessions(project)
-        print(sessions)
         for session in sessions{
             var session = session
             session.invoiced = true
             self.sessionRepository.update(session)
         }
-        let updatedSessions = getNonInvoiceSessions(project)
-        print(updatedSessions)
     }
     func observeChanges(){
         if let results = self.projectRepository.getAll(){
             notificationToken = results.observe { [weak self] (changes: RealmCollectionChange) in
-                print("Update received")
                 self?.updateDataSourceHandler?()
             }
         }
     }
     
     // MARK: Helpers
-    
-    func dataSource()->[String:[ProjectDTO]]{
+    func dataSource()->([ProjectDTO], [ProjectDTO]){
         let projects = self.getProjects()
-        let dataSource = projects.reduce([String: [ProjectDTO]]()) { (dict, project) -> [String: [ProjectDTO]] in
-            var dict = dict
-            dict["done"] = projects.filter({$0.completed})
-            dict["progress"] = projects.filter({!$0.completed})
-            return dict
-        }
-        return dataSource
+        return (projects.filter({!$0.completed}), projects.filter({$0.completed}))
     }
 }

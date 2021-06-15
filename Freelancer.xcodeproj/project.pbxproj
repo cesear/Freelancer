@@ -20,6 +20,7 @@
 		EBA221812678D4F00043EB98 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221802678D4F00043EB98 /* Theme.swift */; };
 		EBA221832678D8160043EB98 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221822678D8160043EB98 /* UIButton.swift */; };
 		EBA221852678D8260043EB98 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221842678D8260043EB98 /* UITextView.swift */; };
+		EBA221872679337B0043EB98 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA221862679337B0043EB98 /* Double.swift */; };
 		EBC12FF62676B9210076D659 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */; };
 		EBC12FF92676BF100076D659 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FF82676BF100076D659 /* UIViewController.swift */; };
 		EBC12FFB2676BF4C0076D659 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC12FFA2676BF4C0076D659 /* String.swift */; };
@@ -86,6 +87,7 @@
 		EBA221802678D4F00043EB98 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		EBA221822678D8160043EB98 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		EBA221842678D8260043EB98 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		EBA221862679337B0043EB98 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		EBC12FF52676B9210076D659 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
 		EBC12FF82676BF100076D659 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EBC12FFA2676BF4C0076D659 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				EBCE70732677CCDD008D691B /* Date.swift */,
 				EBA221822678D8160043EB98 /* UIButton.swift */,
 				EBA221842678D8260043EB98 /* UITextView.swift */,
+				EBA221862679337B0043EB98 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBA221872679337B0043EB98 /* Double.swift in Sources */,
 				EBC12FFB2676BF4C0076D659 /* String.swift in Sources */,
 				EBCE707C2677D72B008D691B /* SessiontDTO+MappableProtocol.swift in Sources */,
 				EBC1301A2677888F0076D659 /* StoryboardInitilizer+Coordinator.swift in Sources */,
