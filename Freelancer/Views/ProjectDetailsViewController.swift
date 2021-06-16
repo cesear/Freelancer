@@ -51,7 +51,9 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.stopProgress()
+        if buttonState == .started{
+            self.stopProgress()
+        }
         self.projectViewModel.updateProject(project.name, self.descriptionTextView.text, self.projectDoneSwitch.isOn, self.projectDetailsViewModel.sessionDuration)
         super.viewWillDisappear(animated)
     }
@@ -77,6 +79,9 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     //MARK: Helpers
     
     func startProgress(){
+        guard buttonState == .stopped else{
+            return
+        }
         projectDetailsViewModel.startDate = Date()
         buttonState = .started
         self.buttonStartProgress.setTitle("Stop Progress", for: .normal)
