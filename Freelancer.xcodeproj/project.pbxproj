@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		232A583B28B4E96100C9AE48 /* ProjectTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A583828B4E92900C9AE48 /* ProjectTableViewControllerTests.swift */; };
+		98DE69F18F3BF699D78BB05A /* Pods_FreelancerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B145BC0F7936940CA2DC4F2 /* Pods_FreelancerTests.framework */; };
 		EB9823782672941A00939804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823772672941A00939804 /* AppDelegate.swift */; };
 		EB98237A2672941A00939804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823792672941A00939804 /* SceneDelegate.swift */; };
 		EB98237F2672941A00939804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB98237D2672941A00939804 /* Main.storyboard */; };
 		EB9823812672942400939804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9823802672942400939804 /* Assets.xcassets */; };
 		EB9823842672942400939804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9823822672942400939804 /* LaunchScreen.storyboard */; };
 		EB98238F2672942500939804 /* FreelancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98238E2672942500939804 /* FreelancerTests.swift */; };
-		EB98239A2672942500939804 /* FreelancerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823992672942500939804 /* FreelancerUITests.swift */; };
 		EB9823B72672972A00939804 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B62672972A00939804 /* RealmSwift */; };
 		EB9823B92672972A00939804 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EB9823B82672972A00939804 /* Realm */; };
 		EB9823BE26729BB600939804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB9823BD26729BB600939804 /* README.md */; };
@@ -51,6 +52,7 @@
 		EBD7902426751A150078D546 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7902326751A150078D546 /* Repository.swift */; };
 		EBD7902626751A980078D546 /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7902526751A980078D546 /* ProjectRepository.swift */; };
 		EBD7902826751C580078D546 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7902726751C580078D546 /* ProjectViewModel.swift */; };
+		F476001254DE71367C7FE140 /* Pods_Freelancer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10894F9D25C8F7167651C5EE /* Pods_Freelancer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,16 +63,16 @@
 			remoteGlobalIDString = EB9823732672941A00939804;
 			remoteInfo = Freelancer;
 		};
-		EB9823962672942500939804 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB98236C2672941900939804 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EB9823732672941A00939804;
-			remoteInfo = Freelancer;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10894F9D25C8F7167651C5EE /* Pods_Freelancer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Freelancer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1178190E1ED48A138938D269 /* Pods-Freelancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Freelancer.release.xcconfig"; path = "Target Support Files/Pods-Freelancer/Pods-Freelancer.release.xcconfig"; sourceTree = "<group>"; };
+		232A583828B4E92900C9AE48 /* ProjectTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewControllerTests.swift; sourceTree = "<group>"; };
+		430AFD32D0535E035CC861CA /* Pods-FreelancerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreelancerTests.debug.xcconfig"; path = "Target Support Files/Pods-FreelancerTests/Pods-FreelancerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B145BC0F7936940CA2DC4F2 /* Pods_FreelancerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreelancerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABC1072CB6B7B8CB28997B0 /* Pods-Freelancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Freelancer.debug.xcconfig"; path = "Target Support Files/Pods-Freelancer/Pods-Freelancer.debug.xcconfig"; sourceTree = "<group>"; };
+		D28A95B73620C705B415C6D1 /* Pods-FreelancerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreelancerTests.release.xcconfig"; path = "Target Support Files/Pods-FreelancerTests/Pods-FreelancerTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB9823742672941A00939804 /* Freelancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Freelancer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9823772672941A00939804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB9823792672941A00939804 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,9 +83,6 @@
 		EB98238A2672942500939804 /* FreelancerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelancerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB98238E2672942500939804 /* FreelancerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelancerTests.swift; sourceTree = "<group>"; };
 		EB9823902672942500939804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB9823952672942500939804 /* FreelancerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelancerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9823992672942500939804 /* FreelancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreelancerUITests.swift; sourceTree = "<group>"; };
-		EB98239B2672942500939804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9823BD26729BB600939804 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBA221802678D4F00043EB98 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		EBA221822678D8160043EB98 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 			files = (
 				EB9823B92672972A00939804 /* Realm in Frameworks */,
 				EB9823B72672972A00939804 /* RealmSwift in Frameworks */,
+				F476001254DE71367C7FE140 /* Pods_Freelancer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,27 +136,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB9823922672942500939804 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				98DE69F18F3BF699D78BB05A /* Pods_FreelancerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A64303DE0F59A880E72F7FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10894F9D25C8F7167651C5EE /* Pods_Freelancer.framework */,
+				9B145BC0F7936940CA2DC4F2 /* Pods_FreelancerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54D7F6895056C5626161C0B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AABC1072CB6B7B8CB28997B0 /* Pods-Freelancer.debug.xcconfig */,
+				1178190E1ED48A138938D269 /* Pods-Freelancer.release.xcconfig */,
+				430AFD32D0535E035CC861CA /* Pods-FreelancerTests.debug.xcconfig */,
+				D28A95B73620C705B415C6D1 /* Pods-FreelancerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EB98236B2672941900939804 = {
 			isa = PBXGroup;
 			children = (
 				EB9823762672941A00939804 /* Freelancer */,
 				EB98238D2672942500939804 /* FreelancerTests */,
-				EB9823982672942500939804 /* FreelancerUITests */,
 				EB9823752672941A00939804 /* Products */,
 				EB9823BD26729BB600939804 /* README.md */,
+				54D7F6895056C5626161C0B0 /* Pods */,
+				2A64303DE0F59A880E72F7FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,7 +180,6 @@
 			children = (
 				EB9823742672941A00939804 /* Freelancer.app */,
 				EB98238A2672942500939804 /* FreelancerTests.xctest */,
-				EB9823952672942500939804 /* FreelancerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,18 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				EB98238E2672942500939804 /* FreelancerTests.swift */,
+				232A583828B4E92900C9AE48 /* ProjectTableViewControllerTests.swift */,
 				EB9823902672942500939804 /* Info.plist */,
 			);
 			path = FreelancerTests;
-			sourceTree = "<group>";
-		};
-		EB9823982672942500939804 /* FreelancerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EB9823992672942500939804 /* FreelancerUITests.swift */,
-				EB98239B2672942500939804 /* Info.plist */,
-			);
-			path = FreelancerUITests;
 			sourceTree = "<group>";
 		};
 		EB9823AB2672943600939804 /* Views */ = {
@@ -378,6 +384,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB98239E2672942500939804 /* Build configuration list for PBXNativeTarget "Freelancer" */;
 			buildPhases = (
+				C1E96D4954486E192CE6E606 /* [CP] Check Pods Manifest.lock */,
 				EB9823702672941A00939804 /* Sources */,
 				EB9823712672941A00939804 /* Frameworks */,
 				EB9823722672941A00939804 /* Resources */,
@@ -400,9 +407,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB9823A12672942500939804 /* Build configuration list for PBXNativeTarget "FreelancerTests" */;
 			buildPhases = (
+				A8F4265C7AAD19EBB5C1A8DB /* [CP] Check Pods Manifest.lock */,
 				EB9823862672942500939804 /* Sources */,
 				EB9823872672942500939804 /* Frameworks */,
 				EB9823882672942500939804 /* Resources */,
+				F6BF6E9FCE5150EC0182182E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -413,24 +422,6 @@
 			productName = FreelancerTests;
 			productReference = EB98238A2672942500939804 /* FreelancerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EB9823942672942500939804 /* FreelancerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB9823A42672942500939804 /* Build configuration list for PBXNativeTarget "FreelancerUITests" */;
-			buildPhases = (
-				EB9823912672942500939804 /* Sources */,
-				EB9823922672942500939804 /* Frameworks */,
-				EB9823932672942500939804 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EB9823972672942500939804 /* PBXTargetDependency */,
-			);
-			name = FreelancerUITests;
-			productName = FreelancerUITests;
-			productReference = EB9823952672942500939804 /* FreelancerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -445,10 +436,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					EB9823892672942500939804 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = EB9823732672941A00939804;
-					};
-					EB9823942672942500939804 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = EB9823732672941A00939804;
 					};
@@ -473,7 +460,6 @@
 			targets = (
 				EB9823732672941A00939804 /* Freelancer */,
 				EB9823892672942500939804 /* FreelancerTests */,
-				EB9823942672942500939804 /* FreelancerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -492,13 +478,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EB9823882672942500939804 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB9823932672942500939804 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -524,6 +503,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		A8F4265C7AAD19EBB5C1A8DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreelancerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1E96D4954486E192CE6E606 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Freelancer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6BF6E9FCE5150EC0182182E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreelancerTests/Pods-FreelancerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreelancerTests/Pods-FreelancerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreelancerTests/Pods-FreelancerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -575,14 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB98238F2672942500939804 /* FreelancerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB9823912672942500939804 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB98239A2672942500939804 /* FreelancerUITests.swift in Sources */,
+				232A583B28B4E96100C9AE48 /* ProjectTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,11 +626,6 @@
 			isa = PBXTargetDependency;
 			target = EB9823732672941A00939804 /* Freelancer */;
 			targetProxy = EB98238B2672942500939804 /* PBXContainerItemProxy */;
-		};
-		EB9823972672942500939804 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EB9823732672941A00939804 /* Freelancer */;
-			targetProxy = EB9823962672942500939804 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -633,6 +661,7 @@
 		EB98239C2672942500939804 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -695,6 +724,7 @@
 		EB98239D2672942500939804 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -750,6 +780,7 @@
 		};
 		EB98239F2672942500939804 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AABC1072CB6B7B8CB28997B0 /* Pods-Freelancer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -769,6 +800,7 @@
 		};
 		EB9823A02672942500939804 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1178190E1ED48A138938D269 /* Pods-Freelancer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -788,8 +820,9 @@
 		};
 		EB9823A22672942500939804 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 430AFD32D0535E035CC861CA /* Pods-FreelancerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MD556DF3MV;
@@ -810,8 +843,9 @@
 		};
 		EB9823A32672942500939804 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28A95B73620C705B415C6D1 /* Pods-FreelancerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MD556DF3MV;
@@ -827,46 +861,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Freelancer.app/Freelancer";
-			};
-			name = Release;
-		};
-		EB9823A52672942500939804 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MD556DF3MV;
-				INFOPLIST_FILE = FreelancerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = hobbii.FreelancerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Freelancer;
-			};
-			name = Debug;
-		};
-		EB9823A62672942500939804 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MD556DF3MV;
-				INFOPLIST_FILE = FreelancerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = hobbii.FreelancerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Freelancer;
 			};
 			name = Release;
 		};
@@ -896,15 +890,6 @@
 			buildConfigurations = (
 				EB9823A22672942500939804 /* Debug */,
 				EB9823A32672942500939804 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB9823A42672942500939804 /* Build configuration list for PBXNativeTarget "FreelancerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB9823A52672942500939804 /* Debug */,
-				EB9823A62672942500939804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
