@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		232A583B28B4E96100C9AE48 /* ProjectTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A583828B4E92900C9AE48 /* ProjectTableViewControllerTests.swift */; };
+		23E0E97D28B4F84A00A44CD6 /* ProjectDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0E97C28B4F84A00A44CD6 /* ProjectDetailsViewControllerTests.swift */; };
+		23E0E97F28B4F85700A44CD6 /* ArchivedProjectsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E0E97E28B4F85700A44CD6 /* ArchivedProjectsTableViewControllerTests.swift */; };
 		98DE69F18F3BF699D78BB05A /* Pods_FreelancerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B145BC0F7936940CA2DC4F2 /* Pods_FreelancerTests.framework */; };
 		EB9823782672941A00939804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823772672941A00939804 /* AppDelegate.swift */; };
 		EB98237A2672941A00939804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9823792672941A00939804 /* SceneDelegate.swift */; };
@@ -69,6 +71,8 @@
 		10894F9D25C8F7167651C5EE /* Pods_Freelancer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Freelancer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1178190E1ED48A138938D269 /* Pods-Freelancer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Freelancer.release.xcconfig"; path = "Target Support Files/Pods-Freelancer/Pods-Freelancer.release.xcconfig"; sourceTree = "<group>"; };
 		232A583828B4E92900C9AE48 /* ProjectTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewControllerTests.swift; sourceTree = "<group>"; };
+		23E0E97C28B4F84A00A44CD6 /* ProjectDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		23E0E97E28B4F85700A44CD6 /* ArchivedProjectsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedProjectsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		430AFD32D0535E035CC861CA /* Pods-FreelancerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreelancerTests.debug.xcconfig"; path = "Target Support Files/Pods-FreelancerTests/Pods-FreelancerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B145BC0F7936940CA2DC4F2 /* Pods_FreelancerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreelancerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABC1072CB6B7B8CB28997B0 /* Pods-Freelancer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Freelancer.debug.xcconfig"; path = "Target Support Files/Pods-Freelancer/Pods-Freelancer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,9 +207,11 @@
 		EB98238D2672942500939804 /* FreelancerTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB9823902672942500939804 /* Info.plist */,
 				EB98238E2672942500939804 /* FreelancerTests.swift */,
 				232A583828B4E92900C9AE48 /* ProjectTableViewControllerTests.swift */,
-				EB9823902672942500939804 /* Info.plist */,
+				23E0E97C28B4F84A00A44CD6 /* ProjectDetailsViewControllerTests.swift */,
+				23E0E97E28B4F85700A44CD6 /* ArchivedProjectsTableViewControllerTests.swift */,
 			);
 			path = FreelancerTests;
 			sourceTree = "<group>";
@@ -614,8 +620,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E0E97D28B4F84A00A44CD6 /* ProjectDetailsViewControllerTests.swift in Sources */,
 				EB98238F2672942500939804 /* FreelancerTests.swift in Sources */,
 				232A583B28B4E96100C9AE48 /* ProjectTableViewControllerTests.swift in Sources */,
+				23E0E97F28B4F85700A44CD6 /* ArchivedProjectsTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

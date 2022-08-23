@@ -17,7 +17,7 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         dataSource = viewModel.dataSource()
-        viewModel.updateDataSourceHandler = { [weak self] in self?.didUpdate() }
+        viewModel.updateDataSourceHandler = { /* TODO: - call did didUpdate */ }
         let addButton = UIBarButtonItem(
             title: "add".localized,
             style: .plain,
