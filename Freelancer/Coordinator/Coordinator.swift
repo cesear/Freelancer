@@ -13,5 +13,3 @@ protocol Coordinator: AnyObject {
     func didFinish(_ coordinator: Coordinator)
     func start()
 }
-
-

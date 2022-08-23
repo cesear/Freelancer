@@ -16,29 +16,29 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        self.goToProjectList()
+        goToProjectList()
     }
-    
-    func goToProjectDetailsViewController(_ project: ProjectDTO){
-        let vc = ProjectDetailsViewController.instantiate()
-        vc.coordinator = self
-        vc.project = project
-        navigationController.pushViewController(vc, animated: false)
+
+    func goToProjectDetailsViewController(_ project: ProjectDTO) {
+        let projectDetailsViewController = ProjectDetailsViewController.instantiate()
+        projectDetailsViewController.coordinator = self
+        projectDetailsViewController.project = project
+        navigationController.pushViewController(projectDetailsViewController, animated: false)
     }
-    
-    func goToProjectList(){
-        let vc = ProjectTableViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+
+    func goToProjectList() {
+        let projectTableViewController = ProjectTableViewController.instantiate()
+        projectTableViewController.coordinator = self
+        navigationController.pushViewController(projectTableViewController, animated: false)
     }
-    
-    func goToProjectArchive(){
-        let vc = ArchivedProjectsTableViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+
+    func goToProjectArchive() {
+        let archivedProjectsTableViewController = ArchivedProjectsTableViewController.instantiate()
+        archivedProjectsTableViewController.coordinator = self
+        navigationController.pushViewController(archivedProjectsTableViewController, animated: false)
     }
-    
+
     func didFinish(_ coordinator: Coordinator) {
-        self.childCoordinators.removeAll(where: { $0 === coordinator })
+        childCoordinators.removeAll(where: { $0 === coordinator })
     }
 }

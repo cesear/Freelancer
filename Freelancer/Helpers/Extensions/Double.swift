@@ -6,7 +6,7 @@
 //
 
 import Foundation
-extension Double{
+extension Double {
     func rounded() -> Double {
         let multiplier = pow(10, Double(3))
         return Darwin.round(self * multiplier) / multiplier

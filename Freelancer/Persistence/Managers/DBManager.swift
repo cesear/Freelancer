@@ -6,12 +6,14 @@
 //
 import Foundation
 import RealmSwift
-//MARK: - DataManager Implementation
+
+// MARK: - DataManager Implementation
+
 class DBManager {
-    
-    //MARK: - Stored Properties
+
+    // MARK: - Properties
+
     let realm: Realm?
-    
     init(_ realm: Realm?) {
         self.realm = realm
     }
@@ -23,7 +25,10 @@ extension RealmError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .eitherRealmIsNilOrNotRealmSpecificModel:
-            return NSLocalizedString("eitherRealmIsNilOrNotRealmSpecificModel", comment: "eitherRealmIsNilOrNotRealmSpecificModel")
+            return NSLocalizedString(
+                "eitherRealmIsNilOrNotRealmSpecificModel",
+                comment: "eitherRealmIsNilOrNotRealmSpecificModel"
+            )
         }
     }
 }

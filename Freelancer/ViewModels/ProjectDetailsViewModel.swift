@@ -7,21 +7,20 @@
 
 import Foundation
 
-class ProjectDetailsViewModel{
-    
+class ProjectDetailsViewModel {
+
     var startDate: Date?
-    var endDate: Date?{
-        didSet{
-            self.calculateSessionDuration()
+    var endDate: Date? {
+        didSet {
+            calculateSessionDuration()
         }
     }
     var sessionDuration: Double = 0.0
 
-    func calculateSessionDuration(){
-        guard let endDate = self.endDate, let startDate = self.startDate else{
+    func calculateSessionDuration() {
+        guard let endDate = endDate, let startDate = startDate else {
             return
         }
-        self.sessionDuration = self.sessionDuration + Double(endDate.numberOfMinutes(from: startDate)) / 60
+        sessionDuration += Double(endDate.numberOfMinutes(from: startDate)) / 60
     }
-    
 }

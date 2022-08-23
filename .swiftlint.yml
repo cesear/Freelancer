@@ -1,0 +1,6 @@
+
+included:
+  - Freelancer
+
+excluded:
+  - Pods

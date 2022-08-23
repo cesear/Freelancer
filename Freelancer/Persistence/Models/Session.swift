@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Session: Object{
+class Session: Object {
     @objc dynamic var sessionLength: Double = 0.0
     @objc dynamic var sessionDescription = ""
     @objc dynamic var sessionId = ""
@@ -19,7 +19,7 @@ class Session: Object{
       }
     let ofProject = LinkingObjects(fromType: Project.self,
                                 property: "sessions")
-    
+
     convenience init(_ sessionLength: Double, _ sessionDescription: String) {
         self.init()
         self.sessionLength = sessionLength

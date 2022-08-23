@@ -6,7 +6,7 @@
 //
 
 import Foundation
-extension Date{
+extension Date {
     func numberOfMinutes(from date: Date) -> Int {
         return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
     }

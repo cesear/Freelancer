@@ -13,4 +13,3 @@ struct SessiontDTO {
     var sessionId = UUID().uuidString
     var invoiced = false
 }
-

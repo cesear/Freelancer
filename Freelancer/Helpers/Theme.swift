@@ -13,4 +13,3 @@ class Theme {
         static let buttonStateStoped =  UIColor(red: 0.312, green: 0.311, blue: 0.311, alpha: 1)
     }
 }
-

@@ -7,8 +7,9 @@
 
 import Foundation
 
-//MARK: - SessiontDTO RealmMappableProtocol
-extension SessiontDTO: MappableProtocol{
+// MARK: - SessiontDTO RealmMappableProtocol
+
+extension SessiontDTO: MappableProtocol {
 
     func mapToPersistenceObject() -> Session {
         let model = Session()
@@ -18,9 +19,13 @@ extension SessiontDTO: MappableProtocol{
         model.invoiced = invoiced
         return model
     }
-    
+
     static func mapFromPersistenceObject(_ object: Session) -> SessiontDTO {
-        return SessiontDTO(sessionLength: object.sessionLength, sessionDescription: object.sessionDescription, sessionId: object.sessionId, invoiced: object.invoiced)
+        return SessiontDTO(
+            sessionLength: object.sessionLength,
+            sessionDescription: object.sessionDescription,
+            sessionId: object.sessionId,
+            invoiced: object.invoiced
+        )
     }
-    
 }

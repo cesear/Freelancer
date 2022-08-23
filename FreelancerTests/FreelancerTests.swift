@@ -15,12 +15,12 @@ class ProjectTests: XCTestCase {
     let javatProject = ProjectDTO.init(name: "Java", completed: false)
     let swiftProject = ProjectDTO.init(name: "Swift", completed: false)
     override func setUp() {
-        self.viewModel = ProjectViewModel()
-        self.viewModel.deleteProjects()
+        viewModel = ProjectViewModel()
+        viewModel.deleteProjects()
     }
     
     override func tearDown() {
-        self.viewModel = nil
+        viewModel = nil
     }
     
     func testSaveProject() {

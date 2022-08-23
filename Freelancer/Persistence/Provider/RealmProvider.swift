@@ -8,35 +8,38 @@
 import Foundation
 import RealmSwift
 
-//MARK: - RealmProvider
+// MARK: - RealmProvider
+
 struct RealmProvider {
-    
-    //MARK: - Stored Properties
+
+    // MARK: - Properties
+
     let configuration: Realm.Configuration
-    
-    //MARK: - Init
-    internal init(config: Realm.Configuration) {
-        configuration = config
-    }
-    
-    //MARK: - Init
+
     private var realm: Realm? {
         do {
             return try Realm(configuration: configuration)
-        }catch {
+        } catch {
             print(error.localizedDescription)
             return nil
         }
     }
-    
-    //MARK: - Configuration
+
+    // MARK: - Init
+    internal init(config: Realm.Configuration) {
+        configuration = config
+    }
+
+    // MARK: - Configuration
+
     private static let defaultConfig = Realm.Configuration(schemaVersion: 1)
     private static let mainConfig = Realm.Configuration(
-        fileURL:  URL.inDocumentsFolder(fileName: "main.realm"),
-        schemaVersion: 1)
-    
-    
-    //MARK: - Realm Instances
+        fileURL: URL.inDocumentsFolder(fileName: "main.realm"),
+        schemaVersion: 1
+    )
+
+    // MARK: - Realm Instances
+
     public static var `default`: Realm? = {
         return RealmProvider(config: RealmProvider.defaultConfig).realm
     }()

@@ -7,13 +7,12 @@
 
 import UIKit
 
-extension UIButton{
+extension UIButton {
     func style() {
-        self.setTitleColor(.white, for: .normal)
-        self.titleLabel?.textAlignment = .center
-        self.layer.cornerRadius = 5
-        self.layer.masksToBounds = true
-        self.backgroundColor = Theme.Color.buttonStateStarted
+        setTitleColor(.white, for: .normal)
+        titleLabel?.textAlignment = .center
+        layer.cornerRadius = 5
+        layer.masksToBounds = true
+        backgroundColor = Theme.Color.buttonStateStarted
     }
-    
 }

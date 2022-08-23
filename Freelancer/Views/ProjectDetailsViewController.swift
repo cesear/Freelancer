@@ -8,7 +8,7 @@
 import UIKit
 
 class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
-    
+
     weak var coordinator: AppCoordinator?
     var project: ProjectDTO!
     @IBOutlet weak var timeSpentLabel: UILabel!
@@ -22,80 +22,89 @@ class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
     @IBOutlet weak var projectDoneSwitch: UISwitch!
     let projectDetailsViewModel = ProjectDetailsViewModel()
     let projectViewModel = ProjectViewModel()
-    enum State{
+
+    enum State {
         case started
         case stopped
     }
+
     var buttonState: State = .stopped
-    
+
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = project.name
-        self.navigationItem.hidesBackButton = false
-        self.descriptionTextView.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))     
+        title = project.name
+        navigationItem.hidesBackButton = false
+        descriptionTextView.addDoneButton(
+            title: "Done",
+            target: self,
+            selector: #selector(tapDone(sender:))
+        )
     }
-    
+
     override func loadView() {
         super.loadView()
-        self.buttonStartProgress.style()
-        self.buttonSave.style()
-        self.descriptionTextView.style()
-        self.projectDoneSwitch.isOn = project.completed
-        self.timeSpentValueLabel.text = String("\(self.projectViewModel.timeSpent(self.project)) hours")
-        
+        buttonStartProgress.style()
+        buttonSave.style()
+        descriptionTextView.style()
+        projectDoneSwitch.isOn = project.completed
+        timeSpentValueLabel.text = String("\(projectViewModel.timeSpent(project)) hours")
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
-        if buttonState == .started{
-            self.stopProgress()
+        if buttonState == .started {
+            stopProgress()
         }
-        self.projectViewModel.updateProject(project.name, self.descriptionTextView.text, self.projectDoneSwitch.isOn, self.projectDetailsViewModel.sessionDuration)
+        projectViewModel.updateProject(
+            project.name,
+            descriptionTextView.text,
+            projectDoneSwitch.isOn,
+            projectDetailsViewModel.sessionDuration
+        )
         super.viewWillDisappear(animated)
     }
-    
+
     // MARK: IBActions
-    
+
     @objc func tapDone(sender: Any) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
-    
+
     @IBAction func startProgress(_ sender: Any) {
-        if buttonState == .stopped{
-            self.startProgress()
+        if buttonState == .stopped {
+            startProgress()
         } else {
-            self.stopProgress()
+            stopProgress()
         }
-        
     }
     @IBAction func saveTap(_ sender: Any) {
         coordinator?.goToProjectList()
     }
-    
-    //MARK: Helpers
-    
-    func startProgress(){
-        guard buttonState == .stopped else{
+
+    // MARK: Helpers
+
+    func startProgress() {
+        guard buttonState == .stopped else {
             return
         }
         projectDetailsViewModel.startDate = Date()
         buttonState = .started
-        self.buttonStartProgress.setTitle("Stop Progress", for: .normal)
-        self.buttonStartProgress.backgroundColor = Theme.Color.buttonStateStoped
+        buttonStartProgress.setTitle("Stop Progress", for: .normal)
+        buttonStartProgress.backgroundColor = Theme.Color.buttonStateStoped
     }
-    
-    func stopProgress(){
+
+    func stopProgress() {
         let calendar = Calendar.current
         let date = calendar.date(byAdding: .minute, value: 60, to: Date())
         projectDetailsViewModel.endDate = date
         buttonState = .stopped
-        self.buttonStartProgress.setTitle("Start Progress", for: .normal)
-        self.timeSpentValueLabel.text = String ("\(self.projectViewModel.timeSpent(self.project) + self.projectDetailsViewModel.sessionDuration) hours")
-        self.buttonStartProgress.backgroundColor = Theme.Color.buttonStateStarted
+        buttonStartProgress.setTitle("Start Progress", for: .normal)
+        let duration = projectViewModel.timeSpent(project) + projectDetailsViewModel.sessionDuration
+        timeSpentValueLabel.text = "\(duration) hours"
+        buttonStartProgress.backgroundColor = Theme.Color.buttonStateStarted
     }
 }
-

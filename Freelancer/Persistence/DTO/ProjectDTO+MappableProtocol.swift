@@ -6,9 +6,11 @@
 //
 
 import Foundation
-//MARK: - MappableProtocol Implementation
-extension ProjectDTO: MappableProtocol{
-    
+
+// MARK: - MappableProtocol Implementation
+
+extension ProjectDTO: MappableProtocol {
+
     func mapToPersistenceObject() -> Project {
         let model = Project()
         model.name = name
@@ -16,7 +18,7 @@ extension ProjectDTO: MappableProtocol{
         model.sessions.append(objectsIn: sessions.map { $0.mapToPersistenceObject() })
         return model
     }
-    
+
     static func mapFromPersistenceObject(_ project: Project) -> ProjectDTO {
         var sessions = [SessiontDTO]()
         project.sessions.forEach { (session) in

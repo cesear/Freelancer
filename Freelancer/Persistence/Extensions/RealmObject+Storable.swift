@@ -8,12 +8,9 @@
 import Foundation
 import RealmSwift
 
-extension Object: Storable {
-    
-}
+extension Object: Storable {}
 
 public struct Sorted {
     var key: String
     var ascending: Bool = true
 }
-
