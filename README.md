@@ -20,8 +20,9 @@ An app that helps freelancers create and manage time spent on different projects
 - Add search for a project by name (projects in progress only)
 
 ## Bonus Tasks
+
 - Implement Cascade when deleting a project so all sessions are also deleted
-- Use combine with SwiftUI
+- Use combine in ArchivedProjectsTableViewController to fetch the data source
 
 ## Design patterns
 

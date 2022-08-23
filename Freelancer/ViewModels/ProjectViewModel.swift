@@ -65,7 +65,7 @@ class ProjectViewModel {
         projectRepository.deleteAll()
     }
 
-    // 7. Bonus task TODO: - Implement bellow tests
+    // 7. Bonus task TODO: - Implement Cascade when deleting a project
 
     func deleteProject(_ projectDto: ProjectDTO) {
         let sessions = projectDto.sessions
@@ -122,6 +122,11 @@ class ProjectViewModel {
     }
 
     // MARK: Helpers
+
+    // 8. Bonus task TODO: - Use combine to fetch data source
+    
+    func dataSourceUsingCombine() {}
+
     func dataSource() -> ([ProjectDTO], [ProjectDTO]) {
         let uncompletedProjects = getProjects().filter({!$0.completed})
         let completedProjects = getProjects().filter({$0.completed})
