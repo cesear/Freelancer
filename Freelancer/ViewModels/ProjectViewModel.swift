@@ -124,7 +124,7 @@ class ProjectViewModel {
     // MARK: Helpers
 
     // 2. Bonus task TODO: - Use combine to fetch data source
-    
+
     func dataSourceUsingCombine() {}
 
     func dataSource() -> ([ProjectDTO], [ProjectDTO]) {

@@ -59,6 +59,6 @@ class Repository<T> {
     func update(object: Storable) throws {
         try dbManager.update(object: object)
     }
-    
+
     // 6. TODO: - Implement search for a project using a name
 }
