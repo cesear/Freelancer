@@ -1,0 +1,12 @@
+/* 
+ Localizable.strings
+  Freelancer
+
+  Created by Kais Segni on 14/06/2021.
+  
+*/
+"add_project_title" = "Ajouter projet";
+"project_exist_error" = "Le projet existe deja";
+"add" = "Ajouter";
+"projects" = "Projets";
+"archived" = "Archiver";

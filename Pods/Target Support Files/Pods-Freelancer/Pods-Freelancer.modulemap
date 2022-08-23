@@ -1,0 +1,6 @@
+framework module Pods_Freelancer {
+  umbrella header "Pods-Freelancer-umbrella.h"
+
+  export *
+  module * { export * }
+}
