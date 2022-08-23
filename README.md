@@ -19,10 +19,8 @@ An app that helps freelancers create and manage time spent on different projects
 1. Implement UI tests using Snapshotkit
 1. Add search for a project by name (projects in progress only)
 
-## Bonus Tasks
-
-1. Implement Cascade when deleting a project so all sessions are also deleted
-1. Use combine in ArchivedProjectsTableViewController to fetch the data source
+1. Implement Cascade when deleting a project so all sessions are also deleted ( ## Bonus Tasks )
+1. Use combine in ArchivedProjectsTableViewController to fetch the data source ( ## Bonus Tasks )
 
 ## Design patterns
 
