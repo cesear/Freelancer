@@ -14,13 +14,13 @@ An app that helps freelancers create and manage time spent on different projects
 
 - From ProjectTableViewController viewDidLoad updated viewModel.updateDataSourceHandler with didUpdate()
 - Use UIKit to implement ProjectDetailsViewController UI instead of storyboard use snapkit to make the costraints
-- Implement unit tests
 - Use SwiftUI to implement ProjectTableViewController and ArchivedProjectsTableViewController UI instead of storyboard
-- Add search for a project by name
+- Implement unit tests
 - Implement UI tests using Snapshotkit
+- Add search for a project by name (projects in progress only)
 
 ## Bonus Tasks
-- Implement Cascade when deleting a project so all sessions are alos deleted
+- Implement Cascade when deleting a project so all sessions are also deleted
 - Use combine with SwiftUI
 
 ## Design patterns

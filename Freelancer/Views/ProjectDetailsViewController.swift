@@ -7,6 +7,8 @@
 
 import UIKit
 
+// 2. TODO: - Use UIKit to implement ProjectDetailsViewController view
+
 class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
 
     weak var coordinator: AppCoordinator?

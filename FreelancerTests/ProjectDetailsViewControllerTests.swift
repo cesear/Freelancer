@@ -10,6 +10,8 @@ import SnapshotTesting
 import XCTest
 @testable import Freelancer
 
+// 5. TODO: - Implement bellow tests using SnapshotTesting
+
 class ProjectDetailsViewControllerTests: XCTestCase {
 
     var sut: ProjectDetailsViewController!

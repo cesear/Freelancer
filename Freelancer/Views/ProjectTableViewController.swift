@@ -7,6 +7,9 @@
 
 import UIKit
 import RealmSwift
+
+// 3. TODO: - Use SwiftUI to implement ProjectTableViewController
+
 class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
 
     let viewModel = ProjectViewModel()
@@ -17,7 +20,11 @@ class ProjectTableViewController: UITableViewController, StoryboardInitilizer {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         dataSource = viewModel.dataSource()
-        viewModel.updateDataSourceHandler = { /* TODO: - call did didUpdate */ }
+        viewModel.updateDataSourceHandler = {
+            /*
+             1. TODO: - call did didUpdate()
+             */
+        }
         let addButton = UIBarButtonItem(
             title: "add".localized,
             style: .plain,

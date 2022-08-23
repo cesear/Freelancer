@@ -7,6 +7,9 @@
 
 import UIKit
 import RealmSwift
+
+// 3. TODO: - Use SwiftUI to implement ArchivedProjectsTableViewController
+
 class ArchivedProjectsTableViewController: UITableViewController, StoryboardInitilizer {
 
     let viewModel = ProjectViewModel()

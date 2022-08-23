@@ -65,7 +65,8 @@ class ProjectViewModel {
         projectRepository.deleteAll()
     }
 
-    // Cascade deleting should be implemented 
+    // 7. Bonus task TODO: - Implement bellow tests
+
     func deleteProject(_ projectDto: ProjectDTO) {
         let sessions = projectDto.sessions
         projectRepository.delete(projectDto)
