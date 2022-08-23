@@ -65,7 +65,7 @@ class ProjectViewModel {
         projectRepository.deleteAll()
     }
 
-    // 7. Bonus task TODO: - Implement Cascade when deleting a project
+    // 1. Bonus task TODO: - Implement Cascade when deleting a project
 
     func deleteProject(_ projectDto: ProjectDTO) {
         let sessions = projectDto.sessions
@@ -123,7 +123,7 @@ class ProjectViewModel {
 
     // MARK: Helpers
 
-    // 8. Bonus task TODO: - Use combine to fetch data source
+    // 2. Bonus task TODO: - Use combine to fetch data source
     
     func dataSourceUsingCombine() {}
 
