@@ -10,7 +10,7 @@ An app that helps freelancers create and manage time spent on different projects
 - Bob can invoice customers while working on projects, thus creating an invoice with his base price of 500 DKK per hour spent Creating subsequent invoice for the same project should only contain the hours worked since the last invoice
 - Bob can mark projects as completed, thus removing them from the overview, they should however always be visible from a project archive view
 
-## Tasks
+## Tasks (4 - 7 hours)
 
 1. From ProjectTableViewController viewDidLoad updated viewModel.updateDataSourceHandler with didUpdate()
 1. Use UIKit to implement ProjectDetailsViewController UI instead of storyboard use snapkit to make the costraints
@@ -23,6 +23,7 @@ An app that helps freelancers create and manage time spent on different projects
 
 1. Implement Cascade when deleting a project so all sessions are also deleted
 1. Add search for a project by name (projects in progress only)
+
 
 ## Design patterns
 
