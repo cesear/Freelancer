@@ -123,7 +123,7 @@ class ProjectViewModel {
 
     // MARK: Helpers
 
-    // 2. Bonus task TODO: - Use combine to fetch data source
+    // 6. TODO: - Use combine to fetch data source
 
     func dataSourceUsingCombine() {}
 

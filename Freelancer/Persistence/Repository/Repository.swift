@@ -60,5 +60,5 @@ class Repository<T> {
         try dbManager.update(object: object)
     }
 
-    // 6. TODO: - Implement search for a project using a name
+    // 2. Bonus task TODO: - Implement search for a project using a name
 }

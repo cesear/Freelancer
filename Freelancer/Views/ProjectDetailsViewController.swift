@@ -7,7 +7,7 @@
 
 import UIKit
 
-// 2. TODO: - Use UIKit to implement ProjectDetailsViewController view
+// 2. TODO: - Use UIKit to implement ProjectDetailsViewController
 
 class ProjectDetailsViewController: UIViewController, StoryboardInitilizer {
 
